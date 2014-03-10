@@ -18,3 +18,9 @@ do_install_append() {
 	install -d ${D}${libdir}/gstreamer-0.10
 	install -m 0755 ${S}/libgstxt.so ${D}${libdir}/gstreamer-0.10
 }
+
+do_install_append_sh4() {
+# we don't have a libxtrend plugin for sh4, thus we remove the mipsel lib
+        rm ${D}${libdir}/gstreamer-0.10/libgstxt.so
+}
+

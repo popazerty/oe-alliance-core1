@@ -102,6 +102,11 @@ DESCRIPTION_enigma2-plugin-extensions-remotechannelstreamconverter = "Fetch chan
 RDEPENDS_enigma2-plugin-extensions-remotechannelstreamconverter = "python-shell"
 RREPLACES_enigma2-plugin-extensions-remotechannelstreamconverter = "enigma2-plugin-extensions-remotestreamconvert"
 
+# Remove dependencies that cannot be built for sh4
+RDEPENDS_enigma2-plugin-systemplugins-vfdcontrol_sh4 = ""
+DEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
+RDEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
+
 inherit gitpkgv autotools
 
 SRCREV = "${AUTOREV}"
@@ -109,7 +114,7 @@ PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 PR = "r93"
 
-SRC_URI="git://github.com/oe-alliance/oe-alliance-plugins.git;protocol=git"
+SRC_URI="git://github.com/DvbMedia/oe-alliance-plugins.git;protocol=git"
 
 EXTRA_OECONF = " \
 	BUILD_SYS=${BUILD_SYS} \

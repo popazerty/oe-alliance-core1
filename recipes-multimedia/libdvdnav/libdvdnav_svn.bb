@@ -12,6 +12,7 @@ PR = "r2"
 
 SRC_URI = "git://github.com/microe/libdvdnav.git \
            file://0001-dvdnavmini.pc-link-against-libdvdnavmini.patch"
+SRC_URI_append_sh4 = "file://libdvdnav_4.2.0.patch;patch=1"
 
 
 S = "${WORKDIR}/git"

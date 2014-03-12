@@ -9,7 +9,9 @@ PKGV = "4.2.+git${GITPKGV}"
 PR = "r2"
 
 SRC_URI = "git://github.com/microe/libdvdread.git"
-SRC_URI_append_sh4 = "file://libdvdread_4.2.0.patch;patch=1"
+SRC_URI_append_sh4 = "\
+	file://libdvdread_4.2.0.patch;patch=1 \
+	"
 
 S = "${WORKDIR}/git"
 

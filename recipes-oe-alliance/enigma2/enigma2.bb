@@ -250,7 +250,9 @@ EXTRA_OECONF = " \
 	${@base_contains("MACHINE_FEATURES", "nolcd", "--with-nolcd" , "", d)} \
 	"
 
-EXTRA_OECONF:append_sh4 = "--enable-sh=yes "
+EXTRA_OECONF_append_sh4 = "\
+	--enable-sh=yes \
+	"
 
 # Swig generated 200k enigma.py file has no purpose for end users
 FILES_${PN}-dbg += "\

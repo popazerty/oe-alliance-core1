@@ -18,7 +18,7 @@ UDEV_GE_141 ?= "0"
 KBRANCH = "stmicro"
 
 SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=stmicro \
-           file://file://linux-sh4-${LINUX_VERSION}-${STM_PATCH_STR}_${MACHINE}.config \
+           file://linux-sh4-${LINUX_VERSION}-${STM_PATCH_STR}_${MACHINE}.config \
            file://st-coprocessor.h \
 "
 S = "${WORKDIR}/git"

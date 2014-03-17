@@ -66,6 +66,8 @@ python do_package_prepend () {
 		('cube', 'cube.jpg', 'cube.png'),
 		('sogno8800hd', 'sogno8800hd.jpg', 'sogno.png'),
 		('enfinity', 'enfinity.jpg', 'evo_small.png'),
+                ('spark', 'spark.jpg', 'spark.png'),
+                ('spark7162', 'spark7162.jpg', 'spark.png'),
 	]
 	import os
 	top = '${D}${PLUGINPATH}/public/images/'

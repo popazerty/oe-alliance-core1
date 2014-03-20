@@ -16,7 +16,7 @@ DEPENDS = " \
     "
 
 DEPENDS_append_sh4 = " \
-    tdt-driver \
+    tdt-dvb-modules-${MACHINE} \
     libmmeimage \
     "
 

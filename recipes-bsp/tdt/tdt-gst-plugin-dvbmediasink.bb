@@ -6,9 +6,9 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882b
 
 DEPENDS = "gstreamer gst-plugins-base libdca tdt-dvb-modules-${MACHINE}"
 
-SRC_URI = "git://github.com/sklnet/tdt-tools.git;protocol=git \
-           file://COPYING \
-"
+SRCREV = "${AUTOREV}"
+
+SRC_URI = "git://github.com/sklnet/tdt-tools.git;protocol=git"
 
 S = "${WORKDIR}/git/gst-plugins-dvbmediasink"
 

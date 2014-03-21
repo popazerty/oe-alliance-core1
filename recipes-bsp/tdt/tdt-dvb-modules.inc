@@ -14,8 +14,8 @@ PACKAGES = "${PN} ${PN}-dev"
 inherit gitpkgv
 
 SRCREV = "${AUTOREV}"
-INC_PR = "r15"
-PV = "0.5+git${SRCPV}"
+INC_PR = "r1"
+PV = "0.1+git${SRCPV}"
 
 BINARY_PTI_NP_PATH ?= "/data/pti_np"
 

@@ -18,7 +18,7 @@ SRC_URI = "\
 	"
 
 DEPENDS = "wvstreams"
-RDEPENDS = "ppp"
+RDEPENDS_${PN} = "ppp"
 
 do_compile () {
     make -j 1

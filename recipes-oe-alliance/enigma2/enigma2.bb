@@ -17,7 +17,7 @@ DEPENDS = " \
 
 DEPENDS_append_sh4 = " \
     tdt-dvb-modules-${MACHINE} \
-    libmmeimage \
+    tdt-utils-${MACHINE} \
     "
 
 RDEPENDS_${PN} = " \

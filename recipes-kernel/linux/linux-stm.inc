@@ -6,7 +6,13 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/linux-stm:"
 
+PKG_kernel-base = "kernel-base"
+PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
+RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
+
+KERNEL_BUILTIN_MODULES = ""
+PACKAGES_DYNAMIC = "kernel-*"
 
 KEEPUIMAGE = "true"
 KTAG = "stlinux24_${STM_PATCH_STR}"

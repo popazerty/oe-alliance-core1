@@ -5,9 +5,9 @@ STLINUX_SH_UPD_RPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/RPMS/sh4/"
 STM_PATCH_STR ??= "0212"
 LINUX_VERSION ??= "2.6.32.61"
 
+PREFERRED_PROVIDER_virtual/kernel = "stlinux24-${MACHINE}"
 PREFERRED_VERSION_stlinux24-${MACHINE} = "${LINUX_VERSION}-stm24-${STM_PATCH_STR}"
 PREFERRED_VERSION_linux-libc-headers = "2.6.32"
-PREFERRED_PROVIDER_virtual/kernel = "stlinux24-${MACHINE}"
 PREFERRED_PROVIDER_openssl = "openssl"
 PREFERRED_PROVIDER_libcrypto = "openssl"
 PREFERRED_PROVIDER_libssl = "openssl"
@@ -41,7 +41,6 @@ MACHINE_EXTRA_RRECOMMENDS = "kernel-modules"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     stlinux24-sh4-stx7111-fdma-firmware \
     stlinux24-sh4-stmfb-firmware-stx7111 \
-    u-boot-fw-utils \
     stslave-fw \
     lirc \
     tdt-utils-${MACHINE} \

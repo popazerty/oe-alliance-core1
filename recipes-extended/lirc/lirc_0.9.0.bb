@@ -7,7 +7,7 @@ PRIORITY = "optional"
 HOMEPAGE = "http://www.lirc.org"
 LICENSE = "GPLv2"
 DEPENDS = "virtual/kernel"
-RDEPENDS_lirc-exec = "lirc evremote2"
+RDEPENDS_lirc-exec = "lirc tdt-utils-${MACHINE}"
 RRECOMMENDS_${PN} = "lirc-exec"
 
 PR = "${INCPR}.2"

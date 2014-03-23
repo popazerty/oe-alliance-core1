@@ -16,7 +16,7 @@ PACKAGES_DYNAMIC = "kernel-*"
 
 KEEPUIMAGE = "true"
 KTAG = "stlinux24_${STM_PATCH_STR}"
-INC_PR = "r6"
+INC_PR = "r7"
 
 # Quirk for udev greater or equal 141
 UDEV_GE_141 ?= "0"
@@ -41,7 +41,7 @@ do_configure_prepend() {
 }
 
 do_install_append() {
-	kerneldir=${D}/kernel
+	kerneldir=${D}${KERNEL_SRC_PATH}
 	if [ -f include/linux/bounds.h ]; then
 		mkdir -p $kerneldir/include/linux
                 cp include/linux/bounds.h $kerneldir/include/linux/bounds.h

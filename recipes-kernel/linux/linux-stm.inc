@@ -16,7 +16,7 @@ PACKAGES_DYNAMIC = "kernel-*"
 
 KEEPUIMAGE = "true"
 KTAG = "stlinux24_${STM_PATCH_STR}"
-INC_PR = "r7"
+INC_PR = "r8"
 
 # Quirk for udev greater or equal 141
 UDEV_GE_141 ?= "0"

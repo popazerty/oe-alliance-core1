@@ -1,5 +1,8 @@
 require recipes-kernel/linux-libc-headers/linux-libc-headers.inc
 
-PR = "r1"
+PR = "r2"
 
-SRC_URI += "file://linuxdvb.patch"
+SRC_URI += "file://linuxdvb.patch \
+    file://ppp.patch \
+    file://types.patch \
+    "

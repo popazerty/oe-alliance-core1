@@ -18,18 +18,16 @@ inherit gitpkgv
 
 PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
-PR = "r0"
+PR = "r2"
 
-SRC_URI = "git://github.com/oe-alliance/openpli-plugins.git;protocol=git \
-           file://pythonpaths.patch"
+SRC_URI = "git://github.com/oe-alliance/openpli-plugins.git;protocol=git"
 
 S = "${WORKDIR}/git"
 
 inherit autotools
 
 EXTRA_OECONF = "--with-boxtype=${MACHINE} \
-    STAGING_INCDIR=${STAGING_INCDIR} \
-    STAGING_LIBDIR=${STAGING_LIBDIR}"
+    LIBDIR=${libdir}"
 
 python populate_packages_prepend () {
 

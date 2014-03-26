@@ -1,4 +1,4 @@
-SUMMARY = "Enigma2 Skin HD-Tech-Skin"
+SUMMARY = "Enigma2 Skin PLi-HD"
 MAINTAINER = "odin-support"
 SECTION = "base"
 PRIORITY = "required"
@@ -12,9 +12,9 @@ SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 VER ="4.0"
-PR = "r1"
+PR = "r0"
 
-SRC_URI="git://github.com/settopbox-support/default-skin2.git"
+SRC_URI="git://github.com/settopbox-support/openPL-Skin.git"
 
 S = "${WORKDIR}/git"
 

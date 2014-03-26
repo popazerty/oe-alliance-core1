@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d
 ALLOW_EMPTY_${PN} = "1"
 
 PV = "1.0"
-PR = "r7"
+PR = "r9"
 
 inherit packagegroup
 
@@ -15,14 +15,16 @@ RDEPENDS_${PN} = "\
     openmips-enigma2 \
     openmips-bootlogo \
     openmips-spinner \
-    libcrypto-compat \
     hddtemp \
     dosfstools \
     ntfs-3g \
-    packagegroup-base-smbfs-client \
-    packagegroup-base-smbfs \
-    packagegroup-base-nfs \
     busybox-cron \
     python-imaging \
     ofgwrite \
+    ${@base_contains("MACHINE_FEATURES", "singlecore", "", \
+    " \
+    task-base-smbfs-client \
+    task-base-smbfs \
+    task-base-nfs \
+    ", d)} \	
     "

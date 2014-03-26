@@ -2,7 +2,7 @@ DESCRIPTION = "gstreamer dvbmediasink plugin"
 SECTION = "multimedia"
 PRIORITY = "optional"
 LICENSE = " GPLv2"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882bbe"
+LIC_FILES_CHKSUM = "file://COPYING;md5=7fbc338309ac38fefcd64b04bb903e34"
 
 DEPENDS = "gstreamer gst-plugins-base libdca tdt-dvb-modules-${MACHINE}"
 

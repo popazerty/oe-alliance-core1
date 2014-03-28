@@ -7,16 +7,14 @@ DEPENDS = "tdt-dvb-modules-${MACHINE} \
     stslave-fw \
     "
 
-PR = "r1"
-
 SRCREV = "${AUTOREV}"
+INC_PR = "r1"
+PV = "0.1+git${SRCPV}"
 
 SRC_URI = " \
     git://github.com/sklnet/tdt-tools.git;protocol=git \
     file://evremote2.sh \
-"
-
-PV = "0.1+git${SRCPV}"
+    "
 
 S = "${WORKDIR}/git"
 
@@ -40,9 +38,9 @@ do_install() {
     install -d ${D}${includedir}/mmeimage
     install -m 644 ${WORKDIR}/git/libmmeimage/*.h ${D}${includedir}/mmeimage
     install -d ${D}/${sysconfdir}/init.d
-    install -d ${D}/${sysconfdir}/rc3.d
+    install -d ${D}/${sysconfdir}/rcS.d
     install -m 0755 ${WORKDIR}/evremote2.sh ${D}${sysconfdir}/init.d
-    ln -sf ../init.d/evremote2.sh ${D}${sysconfdir}/rc3.d/S30evremote2
+    ln -sf ../init.d/evremote2.sh ${D}${sysconfdir}/rcS.d/S40evremote2
 }
 
 FILES_${PN}-dev += "${includedir}/mmeimage"

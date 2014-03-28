@@ -16,7 +16,7 @@ PACKAGES_DYNAMIC = "kernel-*"
 
 KEEPUIMAGE = "true"
 KTAG = "stlinux24_${STM_PATCH_STR}"
-INC_PR = "r8"
+INC_PR = "r9"
 
 # Quirk for udev greater or equal 141
 UDEV_GE_141 ?= "0"
@@ -54,6 +54,11 @@ do_install_append() {
    	install -m 644 ${WORKDIR}/st-coprocessor.h ${D}${includedir}/linux
 }
 
+# hack to override kernel.bbclass...
+# uimages are already built in kernel compile
+do_uboot_mkimage() {
+	:
+}
 
 FILES_kernel-dev += "${includedir}/linux"
 

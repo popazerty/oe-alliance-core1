@@ -5,13 +5,9 @@ RDEPENDS_${PN} = "tdt-utils-${MACHINE}"
 LICENSE = " GPLv2"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
-PACKAGES = "${PN} ${PN}-dev"
-
-inherit module
+inherit module gitpkgv
 
 PACKAGES = "${PN} ${PN}-dev"
-
-inherit gitpkgv
 
 SRCREV = "${AUTOREV}"
 INC_PR = "r1"

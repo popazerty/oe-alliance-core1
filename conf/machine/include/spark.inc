@@ -13,6 +13,7 @@ PREFERRED_VERSION_linux-libc-headers = "2.6.32"
 PREFERRED_PROVIDER_openssl = "openssl"
 PREFERRED_PROVIDER_libcrypto = "openssl"
 PREFERRED_PROVIDER_libssl = "openssl"
+PREFERRED_PROVIDER_showiframe = "tdt-utils-${MACHINE}"
 
 USE_VT = "0"
 MACHINE_FEATURES = "kernel26 ext2 alsa usbhost serial"

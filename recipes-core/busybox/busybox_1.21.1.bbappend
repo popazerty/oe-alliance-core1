@@ -22,6 +22,10 @@ SRC_URI += " \
             file://inetd.conf \
             "
 
+SRC_URI_append_spark7162 = " \
+            file://defconfig_spark7162 \
+            "
+
 # we do not really depend on mtd-utils, but as mtd-utils replaces 
 # include/mtd/* we cannot build in parallel with mtd-utils
 DEPENDS += "mtd-utils"
@@ -40,6 +44,10 @@ INITSCRIPT_PACKAGES += "${PN}-cron"
 INITSCRIPT_NAME_${PN}-cron = "${BPN}-cron" 
 FILES_${PN}-cron = "${sysconfdir}/cron ${sysconfdir}/init.d/${BPN}-cron"
 RDEPENDS_${PN}-cron += "${PN}"
+
+do_configure_prepend_spark7162() {
+    cp ${WORKDIR}/defconfig_spark7162 ${WORKDIR}/defconfig
+}
 
 do_install_append() {
     if grep -q "CONFIG_CRONTAB=y" ${WORKDIR}/defconfig; then

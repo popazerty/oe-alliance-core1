@@ -4,7 +4,6 @@ PR = "r6"
 
 SRC_URI += "file://acinclude.m4 \
             file://remove.ldconfig.call.patch \
-            file://populate-extfs.sh \
 "
 
 SRC_URI[md5sum] = "9e444c240c1001b3292d108fbad0f49c"
@@ -30,7 +29,6 @@ do_install () {
     rm -f ${D}${base_libdir}/libblkid*
     rm -rf ${D}${includedir}/blkid
     rm -f ${D}${base_libdir}/pkgconfig/blkid.pc
-    install -m 0755 ${WORKDIR}/populate-extfs.sh ${D}${bindir}
 }
 
 do_install_append () {

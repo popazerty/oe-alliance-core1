@@ -35,7 +35,8 @@ JFFS2_ENDIANNESS = "${@base_conditional('SITEINFO_ENDIANNESS', 'le', '--little-e
 EXTRA_IMAGECMD_jffs2 = "--pad ${JFFS2_ENDIANNESS} --eraseblock=${JFFS2_ERASEBLOCK} --no-cleanmarkers"
 
 INHERIT += "usb_image-spark71xx"
-IMAGE_FSTYPES ?= "tar.gz ubi ${SDIMG_ROOTFS_TYPE} jffs2 spark71xx-usbimg"
+#IMAGE_FSTYPES ?= "tar.gz ubi ${SDIMG_ROOTFS_TYPE} jffs2 spark71xx-usbimg"
+IMAGE_FSTYPES ?= "tar.gz jffs2 spark71xx-usbimg"
 
 IMAGE_CLASSES += "usb_image-spark71xx"
 INITRAMFS_FSTYPES = "ext2.gz spark-updt"
@@ -48,10 +49,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     stslave-fw \
     lirc \
     lrzsz \
-    mtd-utils \
-    mtd-utils-jffs2 \
-    mtd-utils-ubifs \
-    mtd-utils-misc \
     tdt-utils-${MACHINE} \
     tdt-dvb-modules-${MACHINE} \
     "

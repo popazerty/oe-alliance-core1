@@ -8,7 +8,7 @@ SECTION = "libs"
 LICENSE = "MIT"
 PR = "r0"
 
-RPROVIDES = "directfb-examples"
+RPROVIDES_${PN} = "directfb-examples"
 
 SRC_URI = "${STLINUX_SH_UPD_SRPMS}/stlinux24-target-directfb-examples-1.2.0+git1.76b8894-5.src.rpm"
 LOCAL_SRC = "\

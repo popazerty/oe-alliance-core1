@@ -15,6 +15,7 @@ PREFERRED_VERSION_stlinux24-${MACHINE} = "${LINUX_VERSION}-stm24-${STM_PATCH_STR
 PREFERRED_VERSION_linux-libc-headers = "2.6.32"
 PREFERRED_PROVIDER_showiframe = "tdt-utils-${MACHINE}"
 PREFERRED_PROVIDER_directfb = "stm-directfb"
+PREFERRED_VERSION_e2fsprogs = "1.42.9"
 
 USE_VT = "0"
 MACHINE_FEATURES = "kernel26 ext2 alsa usbhost serial"

@@ -8,9 +8,9 @@ require conf/license/license-gplv2.inc
 
 inherit gitpkgv autotools pythonnative
 SRCREV = "${AUTOREV}"
-PV = "1.41.+git${SRCPV}"
-PKGV = "1.41.+git${GITPKGV}"
-PR = "r15"
+PV = "1.51.+git${SRCPV}"
+PKGV = "1.51.+git${GITPKGV}"
+PR = "r20"
 
 RREPLACES_enigma2-plugin-extensions-iptvlistupdater = "enigma2-plugin-extensions-iptv-list-updater"
 RCONFLICTS_enigma2-plugin-extensions-iptvlistupdater = "enigma2-plugin-extensions-iptv-list-updater"
@@ -34,3 +34,4 @@ FILES_${PN}-po = "/usr/lib/enigma2/python/Plugins/Extensions/IPTV-List-Updater/l
 #     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/(.*/)?\.debug/.*$', 'enigma2-plugin-%s-dbg', '%s (debug)', recursive=True, match_path=True, prepend=True)
 #     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\/.*\.po$', 'enigma2-plugin-%s-po', '%s (translations)', recursive=True, match_path=True, prepend=True)
 # }
+

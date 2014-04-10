@@ -1,9 +1,9 @@
 require linux-stm.inc
 
 # INC_PR is defined in the .inc file if something has change here just increase the number after the dot
-PR = "${INC_PR}.5"
+PR = "${INC_PR}.1"
 
-PV = "${LINUX_VERSION}-stm24-0212"
+PV = "${LINUX_VERSION}-stm24-0214"
 SRCREV = "5cf7f6f209d832a4cf645125598f86213f556fb3"
 
 DEPENDS += " \

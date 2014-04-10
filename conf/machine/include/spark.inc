@@ -5,7 +5,7 @@ MACHINE_BRAND = "Spark"
 TARGET_ARCH = "sh4"
 STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
 STLINUX_SH_UPD_RPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/RPMS/sh4/"
-STM_PATCH_STR ??= "0212"
+STM_PATCH_STR ??= "0214"
 LINUX_VERSION ??= "2.6.32.61"
 
 GCCVERSION = "4.7%"
@@ -15,7 +15,6 @@ PREFERRED_VERSION_stlinux24-${MACHINE} = "${LINUX_VERSION}-stm24-${STM_PATCH_STR
 PREFERRED_VERSION_linux-libc-headers = "2.6.32"
 PREFERRED_PROVIDER_showiframe = "tdt-utils-${MACHINE}"
 PREFERRED_PROVIDER_directfb = "stm-directfb"
-#PREFERRED_VERSION_e2fsprogs = "1.42.9"
 
 USE_VT = "0"
 MACHINE_FEATURES = "kernel26 ext2 alsa usbhost serial"
@@ -58,5 +57,5 @@ MACHINE_EXTRA_RRECOMMENDS = " \
     "
 
 #EGLIBCVERSION ?= "2.17"
-OLDEST_KERNEL = "2.6.32"
+#OLDEST_KERNEL = "2.6.32"
 

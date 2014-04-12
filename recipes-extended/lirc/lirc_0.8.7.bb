@@ -10,18 +10,18 @@ DEPENDS = "virtual/kernel libusb"
 RDEPENDS_lirc-exec = "lirc"
 RRECOMMENDS_${PN} = "lirc-exec"
 
-SRC_URI[md5sum] = "b232aef26f23fe33ea8305d276637086"
-SRC_URI[sha256sum] = "6323afae6ad498d4369675f77ec3dbb680fe661bea586aa296e67f2e2daba4ff"
+SRC_URI[md5sum] = "fb1dcddbc8ca3d03c7f3a2d40cf28b71"
+SRC_URI[sha256sum] = "e431454f266c4ddc209c3cc84fc506cac6092eb5124b4f3dcc215c8584ea7a39"
 LIC_FILES_CHKSUM = "file://COPYING;md5=0636e73ff0215e8d672dc4c32c317bb3"
 
-PR = "${INCPR}.1"
+PR = "${INCPR}.2"
 
 EXTRA_OECONF += "--with-kerneldir=${STAGING_KERNEL_DIR} --without-x --with-driver=userspace "
 
 inherit autotools module-base update-rc.d
 
-SRC_URI_append = " file://lirc-0.9.0-try_first_last_remote.diff;patch=1 \
-    file://lirc-0.9.0-uinput-repeat-fix.diff;patch=1 \
+SRC_URI_append = " file://lirc-0.8.7-try_first_last_remote.diff;patch=1 \
+    file://lirc-0.8.7-uinput-repeat-fix.diff;patch=1 \
     file://fix-libusb-config.patch;patch=1 \
     file://lircd.init \
     file://lircmd.init \

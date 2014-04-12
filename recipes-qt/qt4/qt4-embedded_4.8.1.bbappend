@@ -5,6 +5,22 @@ SRC_URI += "file://0001-Qt-build-NPAPI-without-X11.patch \
             file://0003-Qt-expose-WebKits-WebSecurityEnabled-setting.patch \
             file://0004-Qt-add-Q_GUI_EXPORT-to-QUpdateLaterEvent.patch"
 
+SRC_URI_append_sh4 = " \
+    file://0020-webkit-disable-the-fuse-ld-gold-flag.patch;patch=1 \
+    file://qt-embedded-4.8.0-st200.patch;patch=1 \
+    file://qt-embedded-4.8.0-sh4.patch;patch=1 \
+    file://qt-embedded-4.8.0-armvX.patch;patch=1 \
+    file://qt-embedded-4.8.0-mmap.patch;patch=1 \
+    file://qt-embedded-4.8.0-add_SRC_OVER_rule.patch;patch=1 \
+    file://qt-embedded-4.8.0-add_window_console_message_from_javaScript.patch;patch=1 \
+    file://qt-embedded-4.8.0-reset_CacheLoadControlAttribute_to_default.patch;patch=1 \
+    file://qt-embedded-4.8.0-adds_for_webkit_jit.patch;patch=1 \
+    file://qt-embedded-4.8.0-directfb-enable-QT_NO_DIRECTFB_PREALLOCATED-QT_DIREC.patch;patch=1 \
+    file://qt-embedded-4.8.0-imagedecoderqt-Use-DirectFB-to-load-single-frame-ima.patch;patch=1 \
+    file://qt-embedded-4.8.0-st231_disable_fno-stack-protector.patch;patch=1 \
+    file://qt-embedded-4.8.0-Accelerate_QtWebKit_animated_images.patch;patch=1 \
+"
+
 FILESEXTRAPATHS_prepend := "${THISDIR}/${P}:"
 
 QT_CONFIG_FLAGS += "-nomake demos -nomake docs -nomake examples"

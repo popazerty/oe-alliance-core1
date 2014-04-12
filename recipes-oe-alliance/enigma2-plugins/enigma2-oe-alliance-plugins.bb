@@ -107,6 +107,10 @@ RREPLACES_enigma2-plugin-extensions-remotechannelstreamconverter = "enigma2-plug
 DESCRIPTION_enigma2-plugin-systemplugins-wirelessaccesspoint = "Using a Wireless module as AP."
 RDEPENDS_enigma2-plugin-systemplugins-wirelessaccesspoint = "hostap-daemon bridge-utils"
 
+# Remove dependencies that cannot be built for sh4
+RDEPENDS_enigma2-plugin-systemplugins-vfdcontrol_sh4 = ""
+DEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
+RDEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
 
 inherit gitpkgv autotools pythonnative
 
@@ -115,7 +119,7 @@ PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
 PR = "r6"
 
-SRC_URI="git://github.com/oe-alliance/oe-alliance-plugins.git;protocol=git"
+SRC_URI="git://github.com/dvbmedia/oe-alliance-plugins.git;protocol=git"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \

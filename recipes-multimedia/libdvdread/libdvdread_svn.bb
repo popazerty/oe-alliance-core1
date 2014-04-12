@@ -11,4 +11,8 @@ PR = "r2"
 SRC_URI = "git://github.com/microe/libdvdread.git"
 S = "${WORKDIR}/git"
 
+SRC_URI_append_sh4 = "\
+    file://libdvdread_4.2.0.patch;patch=1 \
+    "
+
 inherit autotools lib_package binconfig pkgconfig

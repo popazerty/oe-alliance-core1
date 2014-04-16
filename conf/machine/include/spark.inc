@@ -3,12 +3,13 @@ require conf/machine/include/tune-sh4.inc
 BRAND_OEM = "spark"
 MACHINE_BRAND = "Spark"
 TARGET_ARCH = "sh4"
+DEFAULTTUNE = "sh4"
 STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
 STLINUX_SH_UPD_RPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/RPMS/sh4/"
 STM_PATCH_STR ??= "0211"
 LINUX_VERSION ??= "2.6.32.59"
 
-#GCCVERSION = "4.7%"
+GCCVERSION = "4.7%"
 
 PREFERRED_PROVIDER_virtual/kernel = "stlinux24-${MACHINE}"
 PREFERRED_VERSION_stlinux24-${MACHINE} = "${LINUX_VERSION}-stm24-${STM_PATCH_STR}"

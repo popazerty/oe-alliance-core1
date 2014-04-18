@@ -7,7 +7,7 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "1.0"
-PR = "r3"
+PR = "r8"
 
 inherit packagegroup
 
@@ -20,12 +20,13 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-skins-opendroid \
     enigma2-plugin-drivers-usbserial \
     enigma2-plugin-extensions-autotimer \
-    enigma2-plugin-extensions-epgsearch \
+    enigma2-plugin-extensions-imdb \
     enigma2-plugin-extensions-addonopendroid \
     enigma2-plugin-extensions-mediaplayer \
     enigma2-plugin-extensions-dvdplayer \
     enigma2-plugin-extensions-volume-adjust \
     enigma2-plugin-systemplugins-videotune \
+    enigma2-plugin-systemplugins-crossepg \
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-positionersetup \
     enigma2-plugin-systemplugins-videoenhancement \

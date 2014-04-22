@@ -1,6 +1,6 @@
 SUMMARY = "UPnP media server"
-RDEPENDS_${PN} = "mediatomb expat libav sqlite3 libexif mozjs zlib file id3lib"
-#RDEPENDS_${PN} = "mediatomb expat libav sqlite3 libexif zlib file id3lib"
+#RDEPENDS_${PN} = "mediatomb expat libav sqlite3 libexif mozjs zlib file id3lib"
+RDEPENDS_${PN} = "mediatomb expat libav sqlite3 libexif zlib file id3lib"
 LICENSE = "proprietary"
 
 require conf/license/license-gplv2.inc

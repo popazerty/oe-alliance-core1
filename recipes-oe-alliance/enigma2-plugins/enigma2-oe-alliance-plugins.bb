@@ -119,7 +119,7 @@ PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
 PR = "r8"
 
-SRC_URI="git://github.com/dvbmedia/oe-alliance-plugins.git;protocol=git"
+SRC_URI="git://github.com/sklnet/oe-alliance-plugins.git;protocol=git"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \

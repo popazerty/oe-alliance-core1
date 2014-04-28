@@ -1,5 +1,5 @@
-SUMMARY = "Enigma2 Skin openPL"
-MAINTAINER = "vali"
+SUMMARY = "Enigma2 Skin opendroid"
+MAINTAINER = "opendroid"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "proprietary"
@@ -12,9 +12,9 @@ SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 VER ="1.0"
-PR = "r0"
+PR = "r4"
 
-SRC_URI="git://github.com/settopbox-support/openPL-Skin.git"
+SRC_URI="git://github.com/opendroid-Team/Skin-Default2.git"
 
 S = "${WORKDIR}/git"
 

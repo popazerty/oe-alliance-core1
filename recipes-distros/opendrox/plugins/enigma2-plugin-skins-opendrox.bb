@@ -1,5 +1,5 @@
-SUMMARY = "Enigma2 Skin opendroid"
-MAINTAINER = "opendroid"
+SUMMARY = "Enigma2 Skin opendrox"
+MAINTAINER = "opendrox"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "proprietary"

@@ -8,7 +8,7 @@ inherit gitpkgv
 SRCREV = "${AUTOREV}"
 PV = "0.1+git${SRCPV}"
 PKGV = "0.1+git${GITPKGV}"
-PR = "r0"
+PR = "r1"
 PACKAGE_ARCH = "all"
 
 SRC_URI = "git://github.com/OpenViX/skin-PLi-Full-HD-Night.git;protocol=git"

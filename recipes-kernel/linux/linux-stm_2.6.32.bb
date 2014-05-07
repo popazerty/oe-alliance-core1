@@ -12,7 +12,7 @@ DEPENDS += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140403"
-MACHINE_KERNEL_PR_append = ".2"
+MACHINE_KERNEL_PR_append = ".4"
 
 STM_PATCH_STR = "0214"
 LINUX_VERSION = "2.6.32.61"
@@ -47,12 +47,12 @@ S = "${WORKDIR}/git"
 PARALLEL_MAKEINST = ""
 
 export OS = "Linux"
-#KERNEL_OBJECT_SUFFIX = "ko"
+KERNEL_OBJECT_SUFFIX = "ko"
 #KERNEL_OUTPUT = "uImage"
-#KERNEL_IMAGETYPE = "uImage"
-#KERNEL_IMAGEDEST = "/tmp"
+KERNEL_IMAGETYPE = "uImage"
+KERNEL_IMAGEDEST = "/tmp"
 
-#FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}"
+FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}"
 
 KEEPUIMAGE = "true"
 
@@ -65,10 +65,6 @@ do_configure () {
         sed -i -e "s:-m0644:-m 0644:g" scripts/Makefile.fwinst
     fi
 }
-
-#do_install_prepend() {
-#    cp ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION} > ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
-#}
 
 do_install_append() {
     kerneldir=${D}${KERNEL_SRC_PATH}
@@ -83,6 +79,7 @@ do_install_append() {
     install -d ${D}${includedir}/linux	
     install -m 644 ${WORKDIR}/st-coprocessor.h ${D}${includedir}/linux
     oe_runmake headers_install INSTALL_HDR_PATH=${D}${exec_prefix}/src/linux-${KERNEL_VERSION} ARCH=$ARCH
+    cp ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
 }
 
 # hack to override kernel.bbclass...
@@ -101,13 +98,14 @@ PACKAGES =+ "kernel-headers"
 FILES_kernel-headers = "${exec_prefix}/src/linux*"
 
 pkg_postinst_kernel-image_spark7162 () {
+    echo "Just for test, not doing anything yet..."
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
             echo "flash_erase /dev/mtd5 0 0"
             echo "nandwrite -p /dev/mtd5 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}"
         fi
     fi
-    rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
+    echo "rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}"
     true
 }
 

@@ -8,8 +8,9 @@ DEPENDS = "tdt-dvb-modules-${MACHINE} \
     "
 
 SRCREV = "${AUTOREV}"
-INC_PR = "r1"
+INC_PR = "r2"
 PV = "0.1+git${SRCPV}"
+PKGV = "0.1.+git${GITPKGV}"
 
 SRC_URI = " \
     git://github.com/sklnet/tdt-tools.git;protocol=git \

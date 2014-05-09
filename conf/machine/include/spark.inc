@@ -5,8 +5,8 @@ MACHINE_BRAND = "Spark"
 TARGET_ARCH = "sh4"
 STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
 STLINUX_SH_UPD_RPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/RPMS/sh4/"
-STM_PATCH_STR ??= "0214"
-LINUX_VERSION ??= "2.6.32.61"
+#STM_PATCH_STR ??= "0214"
+#LINUX_VERSION ??= "2.6.32.61"
 
 GCCVERSION = "4.7%"
 

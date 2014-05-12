@@ -112,12 +112,12 @@ RDEPENDS_enigma2-plugin-systemplugins-vfdcontrol_sh4 = ""
 DEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
 RDEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
 
-inherit gitpkgv autotools pythonnative
+inherit autotools-brokensep gitpkgv pythonnative
 
 SRCREV = "${AUTOREV}"
 PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
-PR = "r8"
+PR = "r9"
 
 SRC_URI="git://github.com/sklnet/oe-alliance-plugins.git;protocol=git"
 

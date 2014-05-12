@@ -9,7 +9,7 @@ inherit gitpkgv autotools deploy
 SRCREV = "${AUTOREV}"
 PV = "2.0+gitr${SRCPV}"
 PKGV = "2.0+gitr${GITPKGV}"
-PR = "r28"
+PR = "r31"
 
 SRC_URI="git://github.com/oe-alliance/3rdparty-plugins.git;protocol=git"
 
@@ -29,7 +29,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-dvb-sundtek.controlcenter_1.0-20110318-r2_mipsel.ipk \
     enigma2-plugin-extensions-atmolightd_0.7-pre22_all.ipk \
     enigma2-plugin-extensions-autobouquets-e2_201310201900-r2_mips32el.ipk \
-    enigma2-plugin-extensions-bildonline_3.0rc9_mips32el.ipk \
+    enigma2-plugin-extensions-bildonline_3.0rc10_mips32el.ipk \
     enigma2-plugin-extensions-bluray_1.4rc1_mips32el.ipk \
     enigma2-plugin-extensions-boblight-enigma2_0.8r6_mips32el.ipk \
     enigma2-plugin-extensions-camofs_8.42_all.ipk \
@@ -44,7 +44,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-hetweer_2.4_mips32el.ipk \
     enigma2-plugin-extensions-hdmitest_0.4_mipsel.ipk \
     enigma2-plugin-extensions-kicker_3.3rc4_mips32el.ipk \
-    enigma2-plugin-extensions-livefootball_4.4_mips32el.ipk \
+    enigma2-plugin-extensions-livefootball-oe2.0_4.9_all.ipk \
     enigma2-plugin-extensions-mediainfo_0.6_r04_all.ipk \
     enigma2-plugin-extensions-mediaportal_5.1.3_all.ipk \
     enigma2-plugin-extensions-msnwetter_0.6rc3_mips32el.ipk \
@@ -56,7 +56,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-opkg-tools_1.3_mipsel.ipk \
     enigma2-plugin-extensions-planerfs_5.27_all.ipk \
     enigma2-plugin-extensions-pluginspanel_1.0_r01_all.ipk \
-    enigma2-plugin-extensions-picturecenterfs_5.01_all.ipk \
+    enigma2-plugin-extensions-picturecenterfs_5.15_all.ipk \
     enigma2-plugin-extensions-radiode_0.1_mips32el.ipk \
     enigma2-plugin-extensions-radioonline-oe2.0_1.0_all.ipk \
     enigma2-plugin-extensions-screensaver_5.6.9_all.ipk \
@@ -82,7 +82,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-verkehrsinfo_0.7rc1_mips32el.ipk \
     enigma2-plugin-extensions-vuplusforum_0.7rc3_mips32el.ipk \
     enigma2-plugin-extensions-webmedia_10.0_r02_oe2.0_all.ipk \
-    enigma2-plugin-extensions-webradiofs_11.73_all.ipk \
+    enigma2-plugin-extensions-webradiofs_11.77_all.ipk \
     enigma2-plugin-extensions-wikipedia_2.1rc5_mips32el.ipk \
     enigma2-plugin-extensions-xbmcaddons_5.1_r0_all.ipk \
     enigma2-plugin-extensions-xbmcwetter_1.0rc4_mips32el.ipk \
@@ -114,23 +114,17 @@ THIRDPARTY_MACHINE_PLUGINS_vuduo2 = " \
     "
 THIRDPARTY_MACHINE_PLUGINS_et4x00 = " \
     enigma2-plugin-extensions-newxtrend-hbbtv_1.6_mips32el.ipk \
-    enigma2-plugin-weblinks-basic_1.3-r0_et4x00.ipk \
-    enigma2-plugin-weblinks-games_1.0-r0_et4x00.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et5x00 = " \
     "
 THIRDPARTY_MACHINE_PLUGINS_et6x00 = " \
     enigma2-plugin-extensions-et-webbrowser_2.0.0-r0_et6x00.ipk \
-    enigma2-plugin-weblinks-basic_1.3-r0_et6x00.ipk \
-    enigma2-plugin-weblinks-games_1.0-r0_et6x00.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et8000 = " \
     enigma2-plugin-extensions-newxtrend-hbbtv_1.6_mips32el.ipk \
      "
 THIRDPARTY_MACHINE_PLUGINS_et9x00 = " \
     enigma2-plugin-extensions-et-webbrowser_2.0.0-r0_et9x00.ipk \
-    enigma2-plugin-weblinks-basic_1.3-r0_et9x00.ipk \
-    enigma2-plugin-weblinks-games_1.0-r0_et9x00.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et10000 = " \
     enigma2-plugin-extensions-newxtrend-hbbtv_1.6_mips32el.ipk \

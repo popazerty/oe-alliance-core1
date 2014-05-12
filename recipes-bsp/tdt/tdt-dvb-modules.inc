@@ -17,7 +17,7 @@ PKGV = "0.3.+git${GITPKGV}"
 BINARY_PTI_NP_PATH ?= "/data/pti_np"
 
 SRC_URI = " \
-    git://github.com/sklnet/tdt-driver.git;protocol=git \
+    git://github.com/sklnet/max-tdt-driver.git;protocol=git \
     file://aotom.sh \
     file://COPYING \
 " 

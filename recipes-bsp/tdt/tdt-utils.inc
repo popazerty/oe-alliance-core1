@@ -8,7 +8,7 @@ DEPENDS = "tdt-dvb-modules-${MACHINE} \
     "
 
 SRCREV = "${AUTOREV}"
-INC_PR = "r2"
+INC_PR = "r5"
 PV = "0.1+git${SRCPV}"
 PKGV = "0.1.+git${GITPKGV}"
 
@@ -26,15 +26,18 @@ EXTRA_OECONF = "--enable-silent-rules --enable-maintainer-mode --prefix="
 LDFLAGS += "-lpthread -lrt"
 
 do_configure() {
+    cd ${S}
     ./autogen.sh
     oe_runconf
 }
 
 do_compile() {
+    cd ${S}
     oe_runmake  'DESTDIR=${D}' 
 }
 
 do_install() {
+    cd ${S}
     oe_runmake  'DESTDIR=${D}' install
     install -d ${D}${includedir}/mmeimage
     install -m 644 ${WORKDIR}/git/libmmeimage/*.h ${D}${includedir}/mmeimage

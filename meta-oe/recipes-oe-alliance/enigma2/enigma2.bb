@@ -15,6 +15,11 @@ DEPENDS = " \
     tuxtxt-enigma2 \
     "
 
+DEPENDS_append_sh4 = " \
+    tdt-dvb-modules-${MACHINE} \
+    tdt-utils-${MACHINE} \
+    "
+
 RDEPENDS_${PN} = " \
     alsa-conf \
     enigma2-fonts \
@@ -233,6 +238,10 @@ EXTRA_OECONF = " \
     ${@base_contains("MACHINE_FEATURES", "fullgraphiclcd", "--with-fullgraphiclcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "gigabluelcd", "--with-gigabluelcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "nolcd", "--with-nolcd" , "", d)} \
+    "
+
+EXTRA_OECONF_append_sh4 = " \
+    --enable-sh=yes \
     "
 
 # Swig generated 200k enigma.py file has no purpose for end users

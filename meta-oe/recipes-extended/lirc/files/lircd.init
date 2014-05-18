@@ -1,0 +1,33 @@
+#!/bin/sh
+
+test -f /usr/sbin/lircd || exit 0
+test -f /etc/lircd.conf || exit 0
+
+# if /var/run does not exist, we are screwed anyway...
+test -d /var/run/lirc || mkdir /var/run/lirc
+
+case "$1" in
+  start)
+    echo -n "Starting lirc daemon: lircd"
+    /usr/sbin/lircd -u -n --device=/dev/lirc0 &
+    echo "."
+    ;;
+  stop)
+    echo -n "Stopping lirc daemon: lircd"
+    killall /usr/sbin/lircd
+    echo "."
+    ;;
+  restart)
+    echo -n "Stopping lirc daemon: lircd"
+    $0 stop
+    sleep 1
+    echo -n "Starting lirc daemon: lircd"
+    $0 start
+    echo "."
+    ;;
+  *)
+    echo "Usage: /etc/init.d/lircd {start|stop|restart}"
+    exit 1
+esac
+
+exit 0

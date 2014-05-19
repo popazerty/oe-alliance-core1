@@ -5,10 +5,10 @@
      buf[802] = 2; /* linear colorimetric */
      buf[803] = s->bits_per_component;
 -    write16(buf + 804, s->bits_per_component == 10 ? 1 : 0); /* packing method */
-+    if (s->bits_per_component == 10)
-+        write16(buf + 804, 1); /* packing method */
++    if (s->bits_per_component == 10) /* packing method */
++        write16(buf + 804, 1);
 +    else
-+        write16(buf + 804, 0); /* packing method */
++        write16(buf + 804, 0);
  
      /* Image source information header */
      write32(buf + 1628, avctx->sample_aspect_ratio.num);

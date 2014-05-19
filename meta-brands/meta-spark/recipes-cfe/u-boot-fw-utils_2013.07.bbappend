@@ -1,7 +1,5 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}/${MACHINE}:"
 
-PRINC_sh4 := "${@int(PRINC) + 1}"
-
 SRC_URI_sh4 += " \
      file://fw_env.config \
 "

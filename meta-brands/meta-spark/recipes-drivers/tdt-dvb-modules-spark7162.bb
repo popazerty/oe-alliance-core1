@@ -1,5 +1,6 @@
 SUMMARY = "Spark7162 driver modules from TDT"
 DESCRIPTION = "Spark7162 driver modules from TDT"
+SRCDATE = "20140510"
 
 require tdt-dvb-modules.inc
 

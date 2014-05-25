@@ -6,7 +6,7 @@ TARGET_ARCH = "sh4"
 STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
 STLINUX_SH_UPD_RPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/RPMS/sh4/"
 
-#GCCVERSION = "4.8%"
+GCCVERSION = "4.7%"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-stm"
 PREFERRED_VERSION_linux-libc-headers = "2.6.32"

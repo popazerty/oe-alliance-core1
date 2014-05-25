@@ -9,19 +9,10 @@
 	PR target/58475
 	* gcc.target/sh/torture/pr58475.c: New test.
 
-Index: a/gcc/config/sh/predicates.md
-===================================================================
---- a/gcc/config/sh/predicates.md	(revision 202699)
-+++ b/gcc/config/sh/predicates.md	(working copy)
-@@ -154,7 +154,7 @@
- 
-       return (regno != T_REG && regno != PR_REG
- 	      && ! TARGET_REGISTER_P (regno)
--	      && (regno != FPUL_REG || TARGET_SH4)
-+	      && regno != FPUL_REG
- 	      && regno != MACH_REG && regno != MACL_REG);
-     }
-   /* Allow a no-op sign extension - compare LOAD_EXTEND_OP.
+2014-05-25  skl
+
+	Removed predicates.md patch since it is already contained in stm patches
+
 Index: a/gcc/config/sh/sh.md
 ===================================================================
 --- a/gcc/config/sh/sh.md	(revision 202699)

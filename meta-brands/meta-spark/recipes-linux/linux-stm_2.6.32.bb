@@ -12,7 +12,7 @@ DEPENDS += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140403"
-MACHINE_KERNEL_PR_append = ".4"
+MACHINE_KERNEL_PR_append = ".6"
 
 STM_PATCH_STR = "0214"
 LINUX_VERSION = "2.6.32.61"

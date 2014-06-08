@@ -16,15 +16,20 @@ The test-suite logs can be found at:
 
 --- a/harness/main.c
 +++ b/harness/main.c
-@@ -14,7 +14,7 @@
+@@ -12,7 +12,13 @@
+ #include <libaio.h>
+ 
  #if __LP64__ == 0
- #if defined(__i386__) || defined(__powerpc__) || defined(__mips__)
++#if defined(__i386__) || defined(__powerpc__) || defined(__mips__)
  #define KERNEL_RW_POINTER	((void *)0xc0010000)
--#elif defined(__arm__) || defined(__m68k__) || defined(__s390__)
 +#elif defined(__arm__) || defined(__m68k__) || defined(__s390__) || defined(__sh__)
- #define KERNEL_RW_POINTER	((void *)0x00010000)
- #elif defined(__hppa__)
- #define KERNEL_RW_POINTER	((void *)0x10100000)
++#define KERNEL_RW_POINTER	((void *)0x00010000)
++#elif defined(__hppa__)
++#define KERNEL_RW_POINTER	((void *)0x10100000)
++#endif
+ #else
+ //#warning Not really sure where kernel memory is.  Guessing.
+ #define KERNEL_RW_POINTER	((void *)0xffffffff81000000)
 --- a/src/libaio.h
 +++ b/src/libaio.h
 @@ -113,6 +113,16 @@ typedef enum io_iocb_cmd {

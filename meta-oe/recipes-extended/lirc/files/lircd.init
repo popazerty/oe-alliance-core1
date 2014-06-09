@@ -9,7 +9,7 @@ test -d /var/run/lirc || mkdir /var/run/lirc
 case "$1" in
   start)
     echo -n "Starting lirc daemon: lircd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/lircd -- -u --device=/dev/lirc0
+    start-stop-daemon --start --quiet --exec /usr/sbin/lircd -- -u -n --device=/dev/lirc0 &
     echo "."
     ;;
   stop)

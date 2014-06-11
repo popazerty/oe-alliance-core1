@@ -10,7 +10,7 @@ inherit module gitpkgv
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
-INC_PR = "r4"
+INC_PR = "r5"
 PV = "0.3+git${SRCPV}"
 PKGV = "0.3.+git${GITPKGV}"
 
@@ -117,9 +117,9 @@ do_install() {
     ln -sf ../init.d/aotom.sh ${D}${sysconfdir}/rcS.d/S04aotom
 
     # if a custom pti.ko is present, overwrite the tdt one
-    if [ -e ${BINARY_PTI_NP_PATH}/pti_${STM_PATCH_STR}.ko ]; then
+    if [ -e ${BINARY_PTI_NP_PATH}/pti.ko ]; then
         echo "Found custom pti.." 
-        install -m 644 ${BINARY_PTI_NP_PATH}/pti_${STM_PATCH_STR}.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko
+        install -m 644 ${BINARY_PTI_NP_PATH}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko
     fi
 }
 

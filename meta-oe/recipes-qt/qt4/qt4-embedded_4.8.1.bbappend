@@ -5,10 +5,6 @@ SRC_URI += "file://0001-Qt-build-NPAPI-without-X11.patch \
             file://0003-Qt-expose-WebKits-WebSecurityEnabled-setting.patch \
             file://0004-Qt-add-Q_GUI_EXPORT-to-QUpdateLaterEvent.patch"
 
-SRC_URI_append_sh4 = " \
-    file://qt-embedded-4.8.0-sh4.patch;patch=1 \
-"
-
 FILESEXTRAPATHS_prepend := "${THISDIR}/${P}:"
 
 QT_CONFIG_FLAGS += "-nomake demos -nomake docs -nomake examples"

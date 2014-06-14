@@ -108,11 +108,6 @@ RREPLACES_enigma2-plugin-extensions-remotechannelstreamconverter = "enigma2-plug
 DESCRIPTION_enigma2-plugin-systemplugins-wirelessaccesspoint = "Using a Wireless module as AP."
 RDEPENDS_enigma2-plugin-systemplugins-wirelessaccesspoint = "hostap-daemon bridge-utils"
 
-# Remove dependencies that cannot be built for sh4
-RDEPENDS_enigma2-plugin-systemplugins-vfdcontrol_sh4 = ""
-DEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
-RDEPENDS_enigma2-plugin-extensions-hbbtv_sh4 = ""
-
 inherit autotools-brokensep gitpkgv pythonnative
 
 SRCREV = "${AUTOREV}"

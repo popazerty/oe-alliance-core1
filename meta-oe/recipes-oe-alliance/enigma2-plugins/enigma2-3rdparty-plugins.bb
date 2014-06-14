@@ -9,7 +9,7 @@ inherit gitpkgv deploy
 SRCREV = "${AUTOREV}"
 PV = "2.1+gitr${SRCPV}"
 PKGV = "2.1+gitr${GITPKGV}"
-PR = "r32"
+PR = "r34"
 
 SRC_URI="git://github.com/oe-alliance/3rdparty-plugins.git;protocol=git"
 
@@ -43,7 +43,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-googlenewsreader_1.0_mips32el.ipk \
     enigma2-plugin-extensions-hetweer_2.6_mips32el.ipk \
     enigma2-plugin-extensions-hdmitest_0.4_mipsel.ipk \
-    enigma2-plugin-extensions-kicker_3.3rc5_mips32el.ipk \
+    enigma2-plugin-extensions-kicker_3.3rc6_mips32el.ipk \
     enigma2-plugin-extensions-livefootball-oe2.0_4.9_all.ipk \
     enigma2-plugin-extensions-mediainfo_0.6_r04_all.ipk \
     enigma2-plugin-extensions-mediaportal_5.2.2_all.ipk \
@@ -55,7 +55,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-navibar_1.1.1_all.ipk \
     enigma2-plugin-extensions-opkg-tools_1.3_mipsel.ipk \
     enigma2-plugin-extensions-oscamstatusview_0.5_mips32el.ipk \
-    enigma2-plugin-extensions-planerfs_6.40_all.ipk \
+    enigma2-plugin-extensions-planerfs_6.43_all.ipk \
     enigma2-plugin-extensions-pluginspanel_1.0_r01_all.ipk \
     enigma2-plugin-extensions-picturecenterfs_5.17_all.ipk \
     enigma2-plugin-extensions-radiode_0.1_mips32el.ipk \
@@ -76,7 +76,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-thetvdb_0.7-20120607-r1_mips32el.ipk \
     enigma2-plugin-extensions-translator_0.8rc7_mips32el.ipk \
     enigma2-plugin-extensions-transmission_2.83_mips32el.ipk \
-    enigma2-plugin-extensions-tsmedia_7.0_full_rc1_all.ipk \
+    enigma2-plugin-extensions-tsmedia_7.2_full_all.ipk \
     enigma2-plugin-extensions-tvspielfilm_6.2rc14_mips32el.ipk \
     enigma2-plugin-extensions-verkehrsinfo_0.9_mips32el.ipk \
     enigma2-plugin-extensions-vuplusforum_0.7rc3_mips32el.ipk \

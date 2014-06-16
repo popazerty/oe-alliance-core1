@@ -11,10 +11,6 @@
 
 #include <linux/dvb/video.h>
 
-#ifdef __sh__
-#define USE_STILLPICTURE
-#endif
-
 void c(int a)
 {
 	if (a < 0)
@@ -88,24 +84,12 @@ int main(int argc, char **argv)
 		memset(stuffing, 0, 8192);
 		read(f, iframe, s.st_size);
 
-#ifdef USE_STILLPICTURE
-		ioctl(fd, VIDEO_SET_STREAMTYPE, 0); // set to mpeg2
-#else
 		if(iframe[0] == 0x00 && iframe[1] == 0x00 && iframe[2] == 0x00 && iframe[3] == 0x01 && (iframe[4] & 0x0f) == 0x07)
 			ioctl(fd, VIDEO_SET_STREAMTYPE, 1); // set to mpeg4
 		else
 			ioctl(fd, VIDEO_SET_STREAMTYPE, 0); // set to mpeg2
-#endif
 		c(ioctl(fd, VIDEO_SELECT_SOURCE, VIDEO_SOURCE_MEMORY));
 		c(ioctl(fd, VIDEO_PLAY));
-
-#ifdef USE_STILLPICTURE
-                struct video_still_picture stillpic;
-                stillpic.iFrame = iframe;
-                stillpic.size = s.st_size;
-		c(ioctl(fd, VIDEO_CLEAR_BUFFER));
-		c(ioctl(fd, VIDEO_STILLPICTURE, &stillpic));
-#else
 		c(ioctl(fd, VIDEO_CONTINUE));
 		c(ioctl(fd, VIDEO_CLEAR_BUFFER));
 		while(pos <= (s.st_size-4) && !(seq_end_avail = (!iframe[pos] && !iframe[pos+1] && iframe[pos+2] == 1 && iframe[pos+3] == 0xB7)))
@@ -125,14 +109,10 @@ int main(int argc, char **argv)
 		if (!seq_end_avail)
 			write_all(fd, seq_end, sizeof(seq_end));
 		write_all(fd, stuffing, 8192);
-#endif
-
 		usleep(150000);
 		c(ioctl(fd, VIDEO_STOP, 0));
 		c(ioctl(fd, VIDEO_SELECT_SOURCE, VIDEO_SOURCE_DEMUX));
 	}
-	close(fd);
-	close(f);
 	return 0;
 }
 

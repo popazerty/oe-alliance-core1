@@ -2,15 +2,16 @@ require lirc.inc
 
 PR = "${INCPR}.1"
 
-SRC_URI[md5sum] = "b232aef26f23fe33ea8305d276637086"
-SRC_URI[sha256sum] = "6323afae6ad498d4369675f77ec3dbb680fe661bea586aa296e67f2e2daba4ff"
-LIC_FILES_CHKSUM = "file://COPYING;md5=0636e73ff0215e8d672dc4c32c317bb3"
+SRC_URI[md5sum] = "3b78c3cc872d5e2fa78b796c2efd46db"
+SRC_URI[sha256sum] = "465e65abc893c305ec347b771e2b98bbc3465ca9ba8c1dcf4cd243107ac2536d"
+LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 SRC_URI_append = " \
-    file://lirc-0.9.0-neutrino-uinput-hack.diff;patch=1 \
-    file://lirc-0.9.0-try_first_last_remote.diff;patch=1 \
-    file://lirc-0.9.0-uinput-repeat-fix.diff;patch=1 \
-    file://lirc-0.9.0-repeat_and_delay_hack.patch \
+    file://lirc-0.9.1-neutrino-uinput-hack.diff;patch=1 \
+    file://lirc-0.9.1-try_first_last_remote.diff;patch=1 \
+    file://lirc-0.9.1-repeat_and_delay_hack.patch \
+    file://lirc-0.9.1-uinput-repeat-fix.diff;patch=1 \
+    file://lirc-0.9.1-disable-systemd-check.diff;patch=1 \
     file://lircd.init \
     file://lircmd.init \
     file://lircexec.init \

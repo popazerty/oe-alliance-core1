@@ -1,0 +1,14 @@
+--- lirc-0.9.1-orig/configure.ac	2014-06-10 21:31:15.000000000 +0200
++++ lirc-0.9.1/configure.ac	2014-06-17 18:53:16.390741812 +0200
+@@ -424,8 +424,9 @@
+ CFLAGS="$CFLAGS $SYSTEMD_CFLAGS"
+ LIBS="$LIBS $SYSTEMD_LIBS"
+ 
+-AC_CHECK_FILE([/usr/lib/systemd/system], [has_systemd_system=true],[true])
+-AM_CONDITIONAL([SYSTEMD_INSTALL],[test x"$has_systemd_system" = xtrue])
++#AC_CHECK_FILE([/usr/lib/systemd/system], [has_systemd_system=true],[true])
++#AM_CONDITIONAL([SYSTEMD_INSTALL],[test x"$has_systemd_system" = xtrue])
++AM_CONDITIONAL([SYSTEMD_INSTALL],[test x = xtrue])
+ 
+ dnl here we see what driver the user wants.
+ 

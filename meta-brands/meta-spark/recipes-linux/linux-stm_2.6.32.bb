@@ -12,7 +12,7 @@ DEPENDS += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140403"
-MACHINE_KERNEL_PR_append = ".6"
+MACHINE_KERNEL_PR_append = ".8"
 
 STM_PATCH_STR = "0214"
 LINUX_VERSION = "2.6.32.61"
@@ -98,16 +98,16 @@ PACKAGES =+ "kernel-headers"
 FILES_kernel-headers = "${exec_prefix}/src/linux*"
 
 pkg_postinst_kernel-image_spark7162 () {
-    echo "Just for test, not doing anything yet..."
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
-            echo "flash_erase /dev/mtd5 0 0"
-            echo "nandwrite -p /dev/mtd5 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}"
+            echo "Erasing kernel..." > /dev/vfd
+            flash_erase /dev/mtd5 0 0
+            echo "Flashing kernel..." > /dev/vfd
+            nandwrite -p /dev/mtd5 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
+            echo "                " > /dev/vfd
+            rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
         fi
     fi
-    echo "rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}"
     true
 }
-
-
 

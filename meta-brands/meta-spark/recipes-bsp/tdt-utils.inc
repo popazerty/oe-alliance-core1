@@ -2,7 +2,7 @@ HOMEPAGE = "https://www.gitorious.org/open-duckbox-project-sh4/tdt"
 SECTION = "base"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
-DEPENDS = "tdt-dvb-modules-${MACHINE} \
+DEPENDS = "spark-dvb-modules \
     jpeg \
     stslave-fw \
     "

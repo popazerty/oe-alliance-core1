@@ -15,9 +15,14 @@ DEPENDS = " \
     tuxtxt-enigma2 \
     "
 
-DEPENDS_append_sh4 = " \
-    tdt-dvb-modules-${MACHINE} \
-    tdt-utils-${MACHINE} \
+DEPENDS_append_spark = " \
+    spark-dvb-modules \
+    tdt-utils \
+    "
+
+DEPENDS_append_spark7162 = " \
+    spark-dvb-modules \
+    tdt-utils \
     "
 
 RDEPENDS_${PN} = " \

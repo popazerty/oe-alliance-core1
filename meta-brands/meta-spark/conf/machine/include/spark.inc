@@ -43,8 +43,8 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     stlinux24-sh4-stmfb-firmware-stx7111 \
     stslave-fw \
     lirc \
-    tdt-utils-${MACHINE} \
-    tdt-dvb-modules-${MACHINE} \
+    tdt-utils \
+    spark-dvb-modules \
     "
 
 MACHINE_EXTRA_RRECOMMENDS = " \

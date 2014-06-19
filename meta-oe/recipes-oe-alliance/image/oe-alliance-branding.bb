@@ -83,7 +83,7 @@ do_configure_prepend() {
     elif [ "${BRAND_OEM}" = "dreambox" ]; then
         DRIVERSDATE="20140313"
     elif [ "${BRAND_OEM}" = "spark" ]; then
-        DRIVERSDATE=`grep "SRCDATE = " ${OEA-META-SPARK-BASE}/recipes-drivers/tdt-dvb-modules-${MACHINE}.bb | cut -b 12-19`
+        DRIVERSDATE=`grep "SRCDATE = " ${OEA-META-SPARK-BASE}/recipes-drivers/spark-dvb-modules.bb | cut -b 12-19`
     else
         DRIVERSDATE='N/A'
     fi

@@ -9,10 +9,14 @@ DEPENDS += " \
            stlinux24-sh4-stx7105-fdma-firmware \
 "
 
+DEPENDS_spark += " \
+           stlinux24-sh4-stx7111-fdma-firmware \
+"
+
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140403"
-MACHINE_KERNEL_PR_append = ".8"
+MACHINE_KERNEL_PR_append = ".9"
 
 STM_PATCH_STR = "0214"
 LINUX_VERSION = "2.6.32.61"
@@ -41,6 +45,15 @@ SRC_URI_append_spark7162 = " \
     file://linux-sh4-stmmac_stm24_${STM_PATCH_STR}.patch;patch=1 \
     file://linux-sh4-lmb_stm24_${STM_PATCH_STR}.patch;patch=1 \
     file://linux-sh4-spark7162_setup_stm24_${STM_PATCH_STR}.patch;patch=1 \
+"
+
+SRC_URI_append_spark = " \
+    file://linux-sh4-stmmac_stm24_${STM_PATCH_STR}.patch;patch=1 \
+    file://linux-sh4-lmb_stm24_${STM_PATCH_STR}.patch;patch=1 \
+    file://linux-sh4-spark_setup_stm24_${STM_PATCH_STR}.patch;patch=1 \
+    file://linux-sh4-lirc_stm_stm24_${STM_PATCH_STR}.patch;patch=1 \
+    file://af901x-NXP-TDA18218.patch;patch=1 \
+    file://dvb-as102.patch;patch=1 \
 "
 
 S = "${WORKDIR}/git"

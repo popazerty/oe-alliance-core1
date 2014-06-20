@@ -14,8 +14,7 @@ INC_PR = "r6"
 PV = "0.3+git${SRCPV}"
 PKGV = "0.3.+git${GITPKGV}"
 
-BINARY_PTI_NP_PATH ?= "/data/pti_np"
-SOURCE_PTI_NP_PATH ?= "/data/pti_np_src"
+PTI_NP_PATH ?= "/data/pti_np"
 
 SRC_URI = " \
     git://github.com/sklnet/max-tdt-driver.git;protocol=git \
@@ -28,16 +27,14 @@ FILES = ""
 
 S = "${WORKDIR}/git"
 
-do_fetch_append() {
-    # if a custom pti source is present, overwrite the tdt one
-    if [ -e ${BINARY_PTI_NP_PATH}/Makefile ]; then
-        echo "Found custom pti sources.." 
-        rm ${S}/pti/*
-        cp ${SOURCE_PTI_NP_PATH}/* ${S}/pti/*
-    fi
-}
-
 do_configure_prepend () {
+
+    # if a custom pti source is present, add it to the sources
+    if [ -e ${PTI_NP_PATH}/Makefile ]; then
+        echo "Found custom pti sources.."
+        cp -r ${PTI_NP_PATH} ${S}
+    fi
+
     if [ -L include/stmfb ]; then
         rm include/stmfb
     fi
@@ -126,11 +123,11 @@ do_install() {
     install -m 0755 ${WORKDIR}/aotom.sh ${D}${sysconfdir}/init.d
     ln -sf ../init.d/aotom.sh ${D}${sysconfdir}/rcS.d/S04aotom
 
-    # if a custom pti.ko is present, overwrite the tdt one
-    if [ ! -e ${BINARY_PTI_NP_PATH}/Makefile ]; then
-        if [ -e ${BINARY_PTI_NP_PATH}/pti.ko ]; then
+    # if no pti_np sources are available and a custom pti.ko is present, overwrite the tdt one
+    if [ ! -e ${PTI_NP_PATH}/Makefile ]; then
+        if [ -e ${PTI_NP_PATH}/pti.ko ]; then
             echo "Found custom pti binary.." 
-            install -m 644 ${BINARY_PTI_NP_PATH}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko
+            install -m 644 ${PTI_NP_PATH}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko
         fi
     fi
 }

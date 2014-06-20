@@ -9,7 +9,7 @@ inherit gitpkgv deploy
 SRCREV = "${AUTOREV}"
 PV = "2.1+gitr${SRCPV}"
 PKGV = "2.1+gitr${GITPKGV}"
-PR = "r36"
+PR = "r38"
 
 SRC_URI="git://github.com/oe-alliance/3rdparty-plugins.git;protocol=git"
 
@@ -44,7 +44,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-hetweer_2.6_mips32el.ipk \
     enigma2-plugin-extensions-hdmitest_0.4_mipsel.ipk \
     enigma2-plugin-extensions-kicker_3.3rc6_mips32el.ipk \
-    enigma2-plugin-extensions-livefootball-oe2.0_5.1_all.ipk \
+    enigma2-plugin-extensions-livefootball-oe2.0_5.2_all.ipk \
     enigma2-plugin-extensions-mediainfo_0.6_r04_all.ipk \
     enigma2-plugin-extensions-mediaportal_5.2.2_all.ipk \
     enigma2-plugin-extensions-msnwetter_0.6rc3_mips32el.ipk \
@@ -140,7 +140,19 @@ THIRDPARTY_MACHINE_PLUGINS_odinm7s = " \
 THIRDPARTY_MACHINE_PLUGINS_odinm7c = " \
     enigma2-plugin-extensions-hbbtv_4.1_ODIN_mips32el.ipk \
     "
-
+THIRDPARTY_MACHINE_PLUGINS_inihdp = " \
+    enigma2-plugin-extensions-hbbtv_1.1-INI_mips32el.ipk \
+    "
+THIRDPARTY_MACHINE_PLUGINS_inihdx = " \
+    enigma2-plugin-extensions-hbbtv_1.1-INI_mips32el.ipk \
+    "
+THIRDPARTY_MACHINE_PLUGINS_inihde = " \
+    enigma2-plugin-extensions-hbbtv_1.1-INI_mips32el.ipk \
+    "
+THIRDPARTY_MACHINE_PLUGINS_inihde2 = " \
+    enigma2-plugin-extensions-hbbtv_1.1-INI_mips32el.ipk \
+    "    
+    
 do_install() {
 }
 

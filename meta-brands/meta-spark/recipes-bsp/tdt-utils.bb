@@ -6,5 +6,5 @@ RPROVIDES_${PN} = " \
         fp_control \
         libmmeimage \
         stfbcontrol \
-        ustslave \
+	ustslave \
 	"

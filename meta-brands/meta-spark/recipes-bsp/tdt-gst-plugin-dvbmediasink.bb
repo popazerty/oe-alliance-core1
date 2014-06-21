@@ -8,15 +8,15 @@ DEPENDS = "gstreamer gst-plugins-base libdca spark-dvb-modules"
 
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://github.com/sklnet/tdt-tools.git;protocol=git"
+SRC_URI = "git://github.com/sklnet/gst-plugin-dvbmediasink.git;protocol=git"
 
-S = "${WORKDIR}/git/gst-plugins-dvbmediasink"
+S = "${WORKDIR}/git/"
 
 inherit gitpkgv
 
 PV = "0.10.1+git${SRCPV}"
 PKGV = "0.10.1+git${GITPKGV}"
-PR = "r1"
+PR = "r2"
 
 inherit autotools pkgconfig
 

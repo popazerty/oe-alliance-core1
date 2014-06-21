@@ -41,7 +41,7 @@ IMAGE_CMD_jffs2_append = " ; \
     cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.jffs2 ${DEPLOY_DIR_IMAGE}/enigma2/e2jffs2.img; \
     cp ${DEPLOY_DIR_IMAGE}/uImage ${DEPLOY_DIR_IMAGE}/enigma2/uImage; \
     cd ${DEPLOY_DIR_IMAGE}; \
-    zip ${IMAGE_NAME}_usb.zip enigma2; \
+    zip -r ${IMAGE_NAME}_usb.zip enigma2; \
     rm -rf enigma2; \
     "
 

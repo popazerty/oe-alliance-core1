@@ -36,14 +36,14 @@ IMAGE_FSTYPES ?= "tar.gz jffs2 spark71xx-usbimg"
 IMAGE_CLASSES += "usb_image-spark71xx"
 INITRAMFS_FSTYPES = "ext2.gz spark-updt"
 
-IMAGE_CMD_prepend = " \
-    rm -rf ${DEPLOY_DIR_IMAGE}/.jffs2; \
-    rm -rf ${DEPLOY_DIR_IMAGE}/.tar.gz; \
-    rm -rf ${DEPLOY_DIR_IMAGE}/.spark71xx-usbimg; \
-    rm -rf ${DEPLOY_DIR_IMAGE}/.manifest; \
-    "
+#IMAGE_CMD_prepend = " \
+#    rm -rf ${DEPLOY_DIR_IMAGE}/.jffs2; \
+#    rm -rf ${DEPLOY_DIR_IMAGE}/.tar.gz; \
+#    rm -rf ${DEPLOY_DIR_IMAGE}/.spark71xx-usbimg; \
+#    rm -rf ${DEPLOY_DIR_IMAGE}/.manifest; \
+#    "
 
-IMAGE_CMD_jffs2_append = " \
+IMAGE_CMD_jffs2_append = " ; \
     mkdir -p ${DEPLOY_DIR_IMAGE}/enigma2; \
     cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.jffs2 ${DEPLOY_DIR_IMAGE}/enigma2/e2jffs2.img; \
     cp ${DEPLOY_DIR_IMAGE}/uImage ${DEPLOY_DIR_IMAGE}/enigma2/uImage; \

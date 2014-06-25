@@ -16,11 +16,11 @@ DEPENDS_spark += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140403"
-MACHINE_KERNEL_PR_append = ".9"
+MACHINE_KERNEL_PR_append = ".11"
 
-STM_PATCH_STR = "0214"
+STM_PATCH_STR = "0215"
 LINUX_VERSION = "2.6.32.61"
-SRCREV = "5cf7f6f209d832a4cf645125598f86213f556fb3"
+SRCREV = "5384bd391266210e72b2ca34590bd9f543cdb5a3"
 
 SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=stmicro \
     file://linux-sh4-linuxdvb_stm24_${STM_PATCH_STR}.patch;patch=1 \
@@ -34,6 +34,7 @@ SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=
     file://linux-ftdi_sio.c_stm24_${STM_PATCH_STR}.patch;patch=1 \
     file://linux-sh4-lzma-fix_stm24_${STM_PATCH_STR}.patch;patch=1 \
     file://linux-tune_stm24.patch;patch=1 \
+    file://linux-sh4-console_missing_argument_stm24_${STM_PATCH_STR}.patch;patch=1 \
     file://linux-sh4-mmap_stm24.patch;patch=1 \
     file://kbuild-generate-mudules-builtin.patch;patch=1 \
     file://linux-sh4-cpuinfo.patch;patch=1 \

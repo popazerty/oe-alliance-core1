@@ -1,6 +1,5 @@
 HOMEPAGE = "http://gitorious.org/open-duckbox-project-sh4"
 SECTION = "kernel/modules"
-RDEPENDS_${PN} = "tdt-utils"
 
 LICENSE = " GPLv2"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882bbe"

@@ -17,12 +17,12 @@ DEPENDS = " \
 
 DEPENDS_append_spark = " \
     spark-dvb-modules \
-    tdt-utils \
+    libmmeimage \
     "
 
 DEPENDS_append_spark7162 = " \
     spark-dvb-modules \
-    tdt-utils \
+    libmmeimage \
     "
 
 RDEPENDS_${PN} = " \

@@ -10,14 +10,14 @@ inherit module gitpkgv
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
-INC_PR = "r6"
-PV = "0.3+git${SRCPV}"
-PKGV = "0.3.+git${GITPKGV}"
+INC_PR = "r1"
+PV = "0.4+git${SRCPV}"
+PKGV = "0.4.+git${GITPKGV}"
 
 PTI_NP_PATH ?= "/data/pti_np"
 
 SRC_URI = " \
-    git://github.com/sklnet/max-tdt-driver.git;protocol=git \
+    git://github.com/sklnet/DDT-driver.git;protocol=git \
     file://aotom.sh \
     file://COPYING \
 " 

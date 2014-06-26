@@ -4,7 +4,7 @@ SRCDATE = "20141006"
 
 require spark-dvb-modules.inc
 
-PR = "${INC_PR}.3"
+PR = "${INC_PR}.1"
 
 do_install_append() {
     find ${D} -name stmcore-display-sti7106.ko | xargs -r rm # we don't have a 7106 chip

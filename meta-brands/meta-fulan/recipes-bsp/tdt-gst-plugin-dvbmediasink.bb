@@ -4,7 +4,7 @@ PRIORITY = "optional"
 LICENSE = " GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=7fbc338309ac38fefcd64b04bb903e34"
 
-DEPENDS = "gstreamer gst-plugins-base libdca spark-dvb-modules"
+DEPENDS = "gstreamer gst-plugins-base libdca fulan-dvb-modules"
 
 SRCREV = "${AUTOREV}"
 

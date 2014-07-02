@@ -2,7 +2,7 @@ HOMEPAGE = "https://github/Duckbox-Developers/apps"
 SECTION = "base"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
-DEPENDS = "spark-dvb-modules"
+DEPENDS = "fulan-dvb-modules"
 
 SRCREV = "${AUTOREV}"
 INC_PR = "r1"

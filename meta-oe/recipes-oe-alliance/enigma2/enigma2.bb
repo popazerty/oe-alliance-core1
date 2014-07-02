@@ -16,12 +16,12 @@ DEPENDS = " \
     "
 
 DEPENDS_append_spark = " \
-    spark-dvb-modules \
+    fulan-dvb-modules \
     libmmeimage \
     "
 
 DEPENDS_append_spark7162 = " \
-    spark-dvb-modules \
+    fulan-dvb-modules \
     libmmeimage \
     "
 

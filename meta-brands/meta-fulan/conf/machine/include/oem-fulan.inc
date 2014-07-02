@@ -111,7 +111,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     stslave-fw \
     ustslave \
     lirc \
-    spark-dvb-modules \
+    fulan-dvb-modules \
     "
 
 MACHINE_EXTRA_RRECOMMENDS = " \

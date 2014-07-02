@@ -115,7 +115,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     "
 
 MACHINE_EXTRA_RRECOMMENDS = " \
-    tdt-gst-plugin-dvbmediasink \
+    fulan-gst-plugin-dvbmediasink \
     "
 
 OLDEST_KERNEL = "2.6.32"

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Create aotom device if not present
-if ! [ -e /dev/vfd ] ; then
-	/bin/mknod /dev/vfd c 147 0
+# Create display device if not present
+if ! [ -e /dev/dbox/oled0 ] ; then
+	/bin/mknod /dev/dbox/oled0 c 147 0
 fi
 

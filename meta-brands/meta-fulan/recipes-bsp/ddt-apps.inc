@@ -4,10 +4,10 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 DEPENDS = "fulan-dvb-modules"
 
-SRCREV = "${AUTOREV}"
+SRCREV = "6d79026a12591038663721c14adb76f8f5c3cc42"
 INC_PR = "r1"
-PV = "0.1+git${SRCPV}"
-PKGV = "0.1.+git${GITPKGV}"
+PV = "1.0"
+PKGV = "1.0"
 
 SRC_URI = " \
     git://github.com/Duckbox-Developers/apps.git;protocol=git \

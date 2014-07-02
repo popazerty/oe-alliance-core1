@@ -62,7 +62,7 @@ STLINUX_SH_UPD_RPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/RPMS/sh4/"
 
 GCCVERSION = "4.8%"
 
-PREFERRED_PROVIDER_virtual/kernel = "linux-stm"
+PREFERRED_PROVIDER_virtual/kernel = "linux-fulan"
 PREFERRED_VERSION_linux-libc-headers = "2.6.32"
 PREFERRED_PROVIDER_directfb = "stm-directfb"
 SERIAL_CONSOLE = "115200 ttyAS0"

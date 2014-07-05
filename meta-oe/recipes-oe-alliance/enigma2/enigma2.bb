@@ -13,16 +13,8 @@ DEPENDS = " \
     python python-imaging python-twisted python-wifi \
     swig-native \
     tuxtxt-enigma2 \
-    "
-
-DEPENDS_append_spark = " \
-    fulan-dvb-modules \
-    libmmeimage \
-    "
-
-DEPENDS_append_spark7162 = " \
-    fulan-dvb-modules \
-    libmmeimage \
+    ${@base_contains("TARGET_ARCH", "sh4", "libmmeimage " , "", d)} \
+    ${@base_contains('BRAND_OEM', 'fulan', 'fulan-dvb-modules ' , ' ', d)} \
     "
 
 RDEPENDS_${PN} = " \
@@ -244,10 +236,7 @@ EXTRA_OECONF = " \
     ${@base_contains("MACHINE_FEATURES", "fullgraphiclcd", "--with-fullgraphiclcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "gigabluelcd", "--with-gigabluelcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "nolcd", "--with-nolcd" , "", d)} \
-    "
-
-EXTRA_OECONF_append_sh4 = " \
-    --enable-sh=yes \
+    ${@base_contains("TARGET_ARCH", "sh4", "--enable-sh=yes " , "", d)} \
     "
 
 # Swig generated 200k enigma.py file has no purpose for end users

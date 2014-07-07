@@ -13,7 +13,7 @@ inherit module
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "d6fbb4a9a1046add649fb6491f465dd51b0af00a"
-PR = "r1"
+PR = "r2"
 PV = "0.1"
 PKGV = "0.1"
 
@@ -21,7 +21,7 @@ PTI_NP_PATH ?= "/data/pti_np"
 
 SRC_URI = " \
     git://github.com/sklnet/DDT-driver.git;protocol=git \
-    file://aotom.sh \
+    file://ddbootup \
     file://COPYING \
 " 
 
@@ -123,8 +123,8 @@ do_install() {
     install -d ${D}/${sysconfdir}/modprobe.d
     install -d ${D}/${sysconfdir}/init.d
     install -d ${D}/${sysconfdir}/rcS.d
-    install -m 0755 ${WORKDIR}/aotom.sh ${D}${sysconfdir}/init.d
-    ln -sf ../init.d/aotom.sh ${D}${sysconfdir}/rcS.d/S04aotom
+    install -m 0755 ${WORKDIR}/ddbootup ${D}${sysconfdir}/init.d
+    ln -sf ../init.d/ddbootup ${D}${sysconfdir}/rcS.d/S04ddbootup
 
     # if no pti_np sources are available and a custom pti.ko is present, overwrite the tdt one
     if [ ! -e ${PTI_NP_PATH}/Makefile ]; then

@@ -70,7 +70,7 @@ SERIAL_CONSOLE = "115200 ttyAS0"
 DVBPROVIDER = "kernel"
 
 USE_VT = "0"
-MACHINE_FEATURES = "3dtv alsa hdmicec switchoff wifi kernel26 ext2 usbhost serial dvb-c singlecore"
+MACHINE_FEATURES = "3dtv alsa hdmicec switchoff wifi kernel26 ext2 usbhost serial dvb-c singlecore textlcd"
 
 KERNEL_IMAGETYPE = "uImage"
 
@@ -84,6 +84,7 @@ EXTRA_IMAGECMD_jffs2 = "--pad ${JFFS2_ENDIANNESS} --eraseblock=${JFFS2_ERASEBLOC
 IMAGE_FSTYPES ?= "jffs2"
 
 # enable this for debug
+IMAGE_FSTYPES += "tar.gz "
 #IMAGE_FSTYPES += "tar.gz spark71xx-usbimg"
 #INHERIT += "usb_image-spark71xx"
 

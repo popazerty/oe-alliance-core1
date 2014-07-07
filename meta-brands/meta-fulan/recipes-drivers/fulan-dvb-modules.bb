@@ -13,7 +13,7 @@ inherit module
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "d6fbb4a9a1046add649fb6491f465dd51b0af00a"
-PR = "r2"
+PR = "r3"
 PV = "0.1"
 PKGV = "0.1"
 

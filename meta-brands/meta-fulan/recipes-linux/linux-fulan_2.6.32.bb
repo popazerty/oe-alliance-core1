@@ -16,7 +16,7 @@ DEPENDS_spark += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140403"
-MACHINE_KERNEL_PR_append = ".1"
+MACHINE_KERNEL_PR_append = ".2"
 
 STM_PATCH_STR = "0215"
 LINUX_VERSION = "2.6.32.61"
@@ -38,6 +38,7 @@ SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=
     file://linux-sh4-mmap_stm24.patch;patch=1 \
     file://kbuild-generate-mudules-builtin.patch;patch=1 \
     file://linux-sh4-cpuinfo.patch;patch=1 \
+    file://linux-sh4-add_missing_eid.patch;patch=1 \
     file://linux-sh4-${LINUX_VERSION}-${STM_PATCH_STR}_${MACHINE}.config \
     file://st-coprocessor.h \
 "

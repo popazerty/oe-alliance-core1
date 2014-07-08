@@ -84,8 +84,8 @@ EXTRA_IMAGECMD_jffs2 = "--pad ${JFFS2_ENDIANNESS} --eraseblock=${JFFS2_ERASEBLOC
 IMAGE_FSTYPES ?= "jffs2"
 
 # enable this for debug
-IMAGE_FSTYPES += "tar.gz "
-#IMAGE_FSTYPES += "tar.gz spark71xx-usbimg"
+#IMAGE_FSTYPES += "tar.gz "
+#IMAGE_FSTYPES += "spark71xx-usbimg "
 #INHERIT += "usb_image-spark71xx"
 
 IMAGE_CLASSES += "usb_image-spark71xx"
@@ -111,6 +111,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     stlinux24-sh4-stmfb-firmware-stx7111 \
     stslave-fw \
     ustslave \
+    stfbcontrol \
     lirc \
     fulan-dvb-modules \
     "

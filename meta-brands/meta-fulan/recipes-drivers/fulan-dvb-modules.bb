@@ -1,21 +1,21 @@
 SUMMARY = "Fulan driver modules from TDT"
 DESCRIPTION = "Fulan driver modules from TDT"
-HOMEPAGE = "http://gitorious.org/open-duckbox-project-sh4"
+HOMEPAGE = "http://github.com/Duckbox-Developers"
 SECTION = "kernel/modules"
 
 LICENSE = " GPLv2"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
-SRCDATE = "20141006"
+SRCDATE = "20140807"
 
-inherit module
+inherit module gitpkgv
 
 PACKAGES = "${PN} ${PN}-dev"
 
-SRCREV = "d6fbb4a9a1046add649fb6491f465dd51b0af00a"
-PR = "r3"
-PV = "0.1"
-PKGV = "0.1"
+SRCREV = "${AUTOREV}"
+PR = "r1"
+PV = "0.2+git${SRCPV}"
+PKGV = "0.2.+git${GITPKGV}"
 
 PTI_NP_PATH ?= "/data/pti_np"
 
@@ -112,7 +112,6 @@ do_install() {
     # install header files
     install -d ${D}/${includedir}/linux/dvb
     install -m 644 bpamem/bpamem.h ${D}/${includedir}
-    install -m 644 frontcontroller/aotom/aotom_main.h ${D}/${includedir}
     install -m 644 player2/linux/include/linux/dvb/stm_ioctls.h ${D}/${includedir}/linux/dvb
     install -m 644 stgfb/stmfb/linux/drivers/video/stmfb.h ${D}/${includedir}/linux
     install -m 644 multicom/include/mme.h ${D}/${includedir}

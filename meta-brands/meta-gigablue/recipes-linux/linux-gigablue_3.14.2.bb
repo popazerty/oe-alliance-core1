@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "72236f0ff51f42496d5d7bae372f4ddc686bc0eb433aa8b6295bbda055
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-MACHINE_KERNEL_PR_append = ".1"
+MACHINE_KERNEL_PR_append = ".3"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
@@ -33,10 +33,13 @@ SRC_URI += "http://archiv.openmips.com/gigablue-linux-${PV}-20140704.tgz \
     file://fix-proc-cputype.patch \
     file://iosched-slice_idle-1.patch \
     file://it913x-switch-off-PID-filter-by-default.patch \
+    file://mtd.patch \
     file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
     file://tda18271-advertise-supported-delsys.patch \
     file://timedate.patch \
     "
+
+SRC_URI_append_gbquadplus = " file://brcm_s3_wol.patch"
 
 S = "${WORKDIR}/linux-${PV}"
 
@@ -64,8 +67,8 @@ kernel_do_install_append() {
 pkg_postinst_kernel-image () {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
-            flash_erase /dev/mtd2 0 0
-            nandwrite -p /dev/mtd2 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
+            flash_erase /dev/${MTD_KERNEL} 0 0
+            nandwrite -p /dev/${MTD_KERNEL} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
             rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
         fi
     fi

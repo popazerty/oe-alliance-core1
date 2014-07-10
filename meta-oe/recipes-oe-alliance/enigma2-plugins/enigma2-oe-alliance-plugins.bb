@@ -38,6 +38,7 @@ PROVIDES += " \
     enigma2-plugin-extensions-lcd4linux \
     enigma2-plugin-extensions-remotechannelstreamconverter \
     ${@base_contains("MACHINE_FEATURES", "legacykernel", "" , "enigma2-plugin-systemplugins-wirelessaccesspoint", d)} \
+    ${@base_contains('MACHINE', 'spark7162', 'enigma2-plugin-systemplugins-uniontunertype ' , ' ', d)} \
      "
 
 DEPENDS = "\

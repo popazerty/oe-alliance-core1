@@ -13,7 +13,7 @@ inherit module gitpkgv
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
-PR = "r1"
+PR = "r2"
 PV = "0.2+git${SRCPV}"
 PKGV = "0.2.+git${GITPKGV}"
 
@@ -22,10 +22,12 @@ PTI_NP_PATH ?= "/data/pti_np"
 SRC_URI = " \
     git://github.com/sklnet/DDT-driver.git;protocol=git \
     file://ddbootup \
+    file://modules_${MACHINE}.conf \
+    file://modules_conf_${MACHINE}.conf \
     file://COPYING \
 " 
 
-FILES_${PN} = "${sysconfdir}/init.d ${sysconfdir}/rcS.d"
+FILES_${PN} = "${sysconfdir}/init.d ${sysconfdir}/rcS.d ${sysconfdir}/modules-load.d ${sysconfdir}/modprobe.d"
 FILES = ""
 
 S = "${WORKDIR}/git"
@@ -119,7 +121,9 @@ do_install() {
 
     #install modutils config
     install -d ${D}/${sysconfdir}/modules-load.d
+    install -m 644 ${WORKDIR}/modules_${MACHINE}.conf ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf
     install -d ${D}/${sysconfdir}/modprobe.d
+    install -m 644 ${WORKDIR}/modules_conf_${MACHINE}.conf ${D}/${sysconfdir}/modprobe.d/_${MACHINE}.conf
     install -d ${D}/${sysconfdir}/init.d
     install -d ${D}/${sysconfdir}/rcS.d
     install -m 0755 ${WORKDIR}/ddbootup ${D}${sysconfdir}/init.d

@@ -10,7 +10,7 @@ DEPENDS = "virtual/kernel"
 RDEPENDS_lirc-exec = "lirc"
 RRECOMMENDS_${PN} = "lirc-exec kernel-module-uinput"
 
-INCPR = "r5"
+INCPR = "r6"
 
 SRC_URI = "http://prdownloads.sourceforge.net/lirc/lirc-${PV}.tar.bz2"
 

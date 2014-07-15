@@ -7,6 +7,10 @@ inherit gitpkgv
 
 SRC_URI = "git://git.code.sf.net/p/openpli/tuxtxt;protocol=git"
 
+SRC_URI_append_sh4 = " \
+    file://tuxtxtlib_sh4_fix.patch;patch=1 \ 
+"
+
 S = "${WORKDIR}/git/libtuxtxt"
 
 PV = "2.0+git${SRCPV}"

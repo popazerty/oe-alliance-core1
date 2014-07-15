@@ -1,6 +1,6 @@
 require lirc.inc
 
-PR = "${INCPR}.2"
+PR = "${INCPR}.3"
 
 SRC_URI[md5sum] = "b232aef26f23fe33ea8305d276637086"
 SRC_URI[sha256sum] = "6323afae6ad498d4369675f77ec3dbb680fe661bea586aa296e67f2e2daba4ff"
@@ -11,18 +11,17 @@ SRC_URI_append = " \
     file://lirc-0.9.0-try_first_last_remote.diff;patch=1 \
     file://lirc-0.9.0-uinput-repeat-fix.diff;patch=1 \
     file://lirc-0.9.0-repeat_and_delay_hack.patch \
+    file://lirc-0.9.0-rename_input_device.patch \
     file://lircd.init \
     file://lircmd.init \
     file://lircexec.init \
 "
 
 SRC_URI_append_spark = " \
-    file://rename_input_device_to_be_spark.patch \
     file://lircd_spark.conf \
 "
 
 SRC_URI_append_spark7162 = " \
-    file://rename_input_device_to_be_spark.patch \
     file://lircd_spark.conf \
 "
 

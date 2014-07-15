@@ -11,6 +11,9 @@ ${@base_contains('MACHINEBUILD', 'sparktriplex', 'SPARK TRIPLEX'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'SPARK RELOADED'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'Alien 2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognotriple', 'Spark Triple' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabtriple', 'Unix Triple HD' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabsolo', 'Unix F+ Solo' , '', d)}\
+${@base_contains('MACHINEBUILD', 'fulanspark1', 'Spark 1+' , '', d)}\
 "
 
 MACHINE_BRAND = "\
@@ -21,6 +24,9 @@ ${@base_contains('MACHINEBUILD', 'sparktriplex', 'GOLDEN MEDIA'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'GOLDEN MEDIA'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'Amiko' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognotriple', 'SOGNO' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabtriple', 'SAB' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabsolo', 'SAB' , '', d)}\
+${@base_contains('MACHINEBUILD', 'fulanspark1', 'Fulan' , '', d)}\
 "
 
 IMAGEDIR ?= "\
@@ -31,6 +37,9 @@ ${@base_contains('MACHINEBUILD', 'sparktriplex', 'enigma2'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'enigma2'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'enigma2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognotriple', 'enigma2' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabtriple', 'enigma2' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabsolo', 'enigma2' , '', d)}\
+${@base_contains('MACHINEBUILD', 'fulanspark1', 'enigma2' , '', d)}\
 "
 
 MTD_KERNEL = "\
@@ -41,6 +50,9 @@ ${@base_contains('MACHINEBUILD', 'sparktriplex', 'mtd5'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'mtd5'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'mtd5' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognotriple', 'mtd5' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabtriple', 'mtd5' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabsolo', 'mtd5' , '', d)}\
+${@base_contains('MACHINEBUILD', 'fulanspark1', 'mtd5' , '', d)}\
 "
 
 MTD_ROOTFS = "\
@@ -51,6 +63,9 @@ ${@base_contains('MACHINEBUILD', 'sparktriplex', 'mtd6'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'mtd6'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'mtd6' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognotriple', 'mtd6' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabtriple', 'mtd6' , '', d)}\
+${@base_contains('MACHINEBUILD', 'sabsolo', 'mtd6' , '', d)}\
+${@base_contains('MACHINEBUILD', 'fulanspark1', 'mtd6' , '', d)}\
 "
 
 KERNEL_FILE = "uImage"

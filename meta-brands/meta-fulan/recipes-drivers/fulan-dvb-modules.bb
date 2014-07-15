@@ -14,8 +14,8 @@ PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
 PR = "r3"
-PV = "0.3+git${SRCPV}"
-PKGV = "0.3.+git${GITPKGV}"
+PV = "0.5+git${SRCPV}"
+PKGV = "0.5.+git${GITPKGV}"
 
 PTI_NP_PATH ?= "/data/pti_np"
 

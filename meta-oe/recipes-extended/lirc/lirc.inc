@@ -9,8 +9,9 @@ LICENSE = "GPLv2"
 DEPENDS = "virtual/kernel"
 RDEPENDS_lirc-exec = "lirc"
 RRECOMMENDS_${PN} = "lirc-exec kernel-module-uinput"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-INCPR = "r6"
+INCPR = "r7"
 
 SRC_URI = "http://prdownloads.sourceforge.net/lirc/lirc-${PV}.tar.bz2"
 

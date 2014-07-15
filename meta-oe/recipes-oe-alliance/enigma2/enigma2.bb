@@ -14,7 +14,6 @@ DEPENDS = " \
     swig-native \
     tuxtxt-enigma2 \
     ${@base_contains("TARGET_ARCH", "sh4", "libmmeimage " , "", d)} \
-    ${@base_contains('BRAND_OEM', 'fulan', 'fulan-dvb-modules ' , ' ', d)} \
     "
 
 RDEPENDS_${PN} = " \

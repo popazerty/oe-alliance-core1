@@ -33,7 +33,7 @@ EXTRA_OECONF_append_sh4 = " \
 
 # mozjs requires autoreconf 2.13
 do_configure() {
-    ./configure ${EXTRA_OECONF}
+    ${S}/configure ${EXTRA_OECONF}
 }
 
 PACKAGES =+ "lib${PN}"

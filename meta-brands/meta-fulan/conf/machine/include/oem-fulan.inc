@@ -6,7 +6,9 @@ BRAND_OEM = "fulan"
 MACHINE_NAME = "\
 ${@base_contains('MACHINEBUILD', 'amiko8900', 'SHD-8900 Alien' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognorevolution', 'Spark Revolution' , '', d)}\
-${@base_contains('MACHINEBUILD', 'arguspingulux', 'pingulux' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspingulux', 'argus pingulux' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxmini', 'argus pingulux mini' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxplus', 'argus pingulux plus' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparktriplex', 'SPARK TRIPLEX'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'SPARK RELOADED'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'Alien 2' , '', d)}\
@@ -19,7 +21,9 @@ ${@base_contains('MACHINEBUILD', 'fulanspark1', 'Spark 1+' , '', d)}\
 MACHINE_BRAND = "\
 ${@base_contains('MACHINEBUILD', 'amiko8900', 'Amiko' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognorevolution', 'SOGNO' , '', d)}\
-${@base_contains('MACHINEBUILD', 'arguspingulux', 'argus' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspingulux', 'Edision' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxmini', 'Edision' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxplus', 'Edision' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparktriplex', 'GOLDEN MEDIA'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'GOLDEN MEDIA'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'Amiko' , '', d)}\
@@ -33,6 +37,8 @@ IMAGEDIR ?= "\
 ${@base_contains('MACHINEBUILD', 'amiko8900', 'enigma2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognorevolution', 'enigma2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'arguspingulux', 'enigma2' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxmini', 'enigma2' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxplus', 'enigma2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparktriplex', 'enigma2'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'enigma2'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'enigma2' , '', d)}\
@@ -46,6 +52,8 @@ MTD_KERNEL = "\
 ${@base_contains('MACHINEBUILD', 'amiko8900', 'mtd5' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognorevolution', 'mtd5' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'arguspingulux', 'mtd5' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxmini', 'mtd5' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxplus', 'mtd5' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparktriplex', 'mtd5'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'mtd5'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'mtd5' , '', d)}\
@@ -59,6 +67,8 @@ MTD_ROOTFS = "\
 ${@base_contains('MACHINEBUILD', 'amiko8900', 'mtd6' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sognorevolution', 'mtd6' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'arguspingulux', 'mtd6' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxmini', 'mtd6' , '', d)}\
+${@base_contains('MACHINEBUILD', 'arguspinguluxplus', 'mtd6' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparktriplex', 'mtd6'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sparkreloaded', 'mtd6'  , '', d)}\
 ${@base_contains('MACHINEBUILD', 'amikoalien', 'mtd6' , '', d)}\

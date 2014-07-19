@@ -13,7 +13,7 @@ inherit autotools-brokensep gitpkgv pythonnative
 
 PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
-PR = "r5"
+PR = "r6"
 
 SRC_URI = "${ENIGMA2_PLUGINS_URI} file://pluginnotwanted.patch"
 
@@ -62,7 +62,7 @@ DEPENDS = "enigma2 \
     python-daap \
     dvdbackup \
     libcddb \
-    nmap \
+    ${@base_contains("TARGET_ARCH", "sh4", "" , "nmap", d)} \
     libshowiframe \
     libav \
     "

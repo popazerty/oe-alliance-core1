@@ -4,7 +4,7 @@ SECTION = "kernel"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 KV = "2.6.32"
-PR = "r3"
+PR = "r4"
 
 DEPENDS_spark7162 += " \
            stlinux24-sh4-stx7105-fdma-firmware \
@@ -17,7 +17,7 @@ DEPENDS_spark += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140603"
-MACHINE_KERNEL_PR_append = ".17"
+MACHINE_KERNEL_PR_append = ".18"
 
 STM_PATCH_STR = "0215"
 LINUX_VERSION = "2.6.32.61"
@@ -64,7 +64,7 @@ PARALLEL_MAKEINST = ""
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
-#KERNEL_OUTPUT = "uImage"
+KERNEL_OUTPUT = "uImage"
 KERNEL_IMAGETYPE = "uImage"
 KERNEL_IMAGEDEST = "/tmp"
 
@@ -113,14 +113,11 @@ EXTRA_OEMAKE = "${PARALLEL_MAKE} "
 PACKAGES =+ "kernel-headers"
 FILES_kernel-headers = "${exec_prefix}/src/linux*"
 
-pkg_postinst_kernel-image_spark7162 () {
+pkg_postinst_kernel-image() {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
-            echo "Erasing kernel..." > /dev/vfd
-            flash_erase /dev/mtd5 0 0
-            echo "Flashing kernel..." > /dev/vfd
-            nandwrite -p /dev/mtd5 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
-            echo "                " > /dev/vfd
+            flash_erase /dev/${MTD_KERNEL} 0 0
+            nandwrite -p /dev/${MTD_KERNEL} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
             rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
         fi
     fi

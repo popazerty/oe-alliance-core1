@@ -98,6 +98,8 @@ USE_VT = "0"
 MACHINE_FEATURES = "3dtv alsa hdmicec switchoff wifi kernel26 ext2 usbhost serial dvb-c singlecore textlcd"
 
 KERNEL_IMAGETYPE = "uImage"
+KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
+KERNEL_CONSOLE = "ttyS0,115200n8"
 
 # save some extra space, kernel has its own mtd partion 
 RDEPENDS_kernel-base = ""

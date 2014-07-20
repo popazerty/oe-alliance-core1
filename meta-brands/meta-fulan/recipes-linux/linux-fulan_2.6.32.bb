@@ -4,7 +4,7 @@ SECTION = "kernel"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 KV = "2.6.32"
-PR = "r4"
+PR = "r5"
 
 DEPENDS_spark7162 += " \
            stlinux24-sh4-stx7105-fdma-firmware \
@@ -17,11 +17,19 @@ DEPENDS_spark += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140603"
-MACHINE_KERNEL_PR_append = ".18"
+MACHINE_KERNEL_PR_append = ".19"
 
 STM_PATCH_STR = "0215"
 LINUX_VERSION = "2.6.32.61"
 SRCREV = "5384bd391266210e72b2ca34590bd9f543cdb5a3"
+
+# By default, kernel.bbclass modifies package names to allow multiple kernels
+# to be installed in parallel. We revert this change and rprovide the versioned
+# package names instead, to allow only one kernel to be installed.
+PKG_kernel-base = "kernel-base"
+PKG_kernel-image = "kernel-image"
+RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
+RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=stmicro \
     file://linux-sh4-linuxdvb_stm24_${STM_PATCH_STR}.patch;patch=1 \
@@ -64,7 +72,7 @@ PARALLEL_MAKEINST = ""
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
-KERNEL_OUTPUT = "uImage"
+KERNEL_OUTPUT = "vmlinux"
 KERNEL_IMAGETYPE = "uImage"
 KERNEL_IMAGEDEST = "/tmp"
 
@@ -112,6 +120,11 @@ EXTRA_OEMAKE = "${PARALLEL_MAKE} "
 
 PACKAGES =+ "kernel-headers"
 FILES_kernel-headers = "${exec_prefix}/src/linux*"
+
+kernel_do_install_append() {
+    install -d ${D}${KERNEL_IMAGEDEST}
+    install -m 0755 ${KERNEL_OUTPUT} ${D}${KERNEL_IMAGEDEST}
+}
 
 pkg_postinst_kernel-image() {
     if [ "x$D" == "x" ]; then

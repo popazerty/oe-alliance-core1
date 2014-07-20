@@ -30,7 +30,6 @@ PKG_kernel-base = "kernel-base"
 PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
-RDEPENDS_kernel-base = "kernel-image"
 
 SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=stmicro \
     file://linux-sh4-linuxdvb_stm24_${STM_PATCH_STR}.patch;patch=1 \

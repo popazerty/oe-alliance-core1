@@ -139,6 +139,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     stfbcontrol \
     lirc \
     fulan-dvb-modules \
+    mtd-utils-jffs2 \
     "
 
 MACHINE_EXTRA_RRECOMMENDS = " \

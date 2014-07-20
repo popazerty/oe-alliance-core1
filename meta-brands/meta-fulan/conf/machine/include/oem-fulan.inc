@@ -119,6 +119,10 @@ IMAGE_FSTYPES ?= "jffs2"
 IMAGE_CLASSES += "usb_image-spark71xx"
 INITRAMFS_FSTYPES = "ext2.gz spark-updt"
 
+IMAGE_CMD_jffs2_prepend = " \
+    rm -rf ${IMAGE_ROOTFS}/tmp/*; \
+    "
+
 IMAGE_CMD_jffs2_append = " ; \
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mv ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.jffs2 ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${ROOTFS_FILE}; \

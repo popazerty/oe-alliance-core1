@@ -4,7 +4,7 @@ SECTION = "kernel"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 KV = "2.6.32"
-PR = "r5"
+PR = "r6"
 
 DEPENDS_spark7162 += " \
            stlinux24-sh4-stx7105-fdma-firmware \
@@ -17,7 +17,7 @@ DEPENDS_spark += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140603"
-MACHINE_KERNEL_PR_append = ".19"
+MACHINE_KERNEL_PR_append = ".20"
 
 STM_PATCH_STR = "0215"
 LINUX_VERSION = "2.6.32.61"
@@ -30,6 +30,7 @@ PKG_kernel-base = "kernel-base"
 PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
+RDEPENDS_kernel-base = "kernel-image"
 
 SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=stmicro \
     file://linux-sh4-linuxdvb_stm24_${STM_PATCH_STR}.patch;patch=1 \

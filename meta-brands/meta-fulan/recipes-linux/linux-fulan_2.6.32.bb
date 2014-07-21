@@ -4,7 +4,7 @@ SECTION = "kernel"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 KV = "2.6.32"
-PR = "r7"
+PR = "r8"
 
 DEPENDS_spark7162 += " \
            stlinux24-sh4-stx7105-fdma-firmware \
@@ -17,7 +17,7 @@ DEPENDS_spark += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140603"
-MACHINE_KERNEL_PR_append = ".21"
+MACHINE_KERNEL_PR_append = ".22"
 
 STM_PATCH_STR = "0215"
 LINUX_VERSION = "2.6.32.61"

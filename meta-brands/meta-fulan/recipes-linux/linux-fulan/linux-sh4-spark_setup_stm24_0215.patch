@@ -218,11 +218,11 @@
 +		 .size = 0x17800000,
 +		 .offset = 0x800000
 +	     }, {
-+		 .name = "E2 Kernel",
++		 .name = "kernel",
 +		 .size = 0x800000,
 +		 .offset = 0x18000000
 +	     }, {
-+		 .name = "E2 RootFs",
++		 .name = "rootfs",
 +		 .size = 0x7700000,
 +		 .offset = 0x18800000
 +	     },

@@ -138,13 +138,13 @@
 +	},
 +
 +    {
-+		.name	= "E2 kernel",
++		.name	= "kernel",
 +		.offset	= 0x18000000,
 +		.size	= 0x00800000 //8M
 +	},
 +
 +    {
-+		.name	= "E2 Userfs",
++		.name	= "rootfs",
 +		.offset	= 0x18800000,
 +		.size	= 0x07700000 //119M	cc changed reserved 1024KB for u-boot bbt
 +	},

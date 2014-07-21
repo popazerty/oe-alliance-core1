@@ -19,6 +19,7 @@ ${@base_contains('MACHINEBUILD', 'sabtriple', 'Unix Triple HD' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sabsolo', 'Unix F+ Solo' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'fulanspark1', 'Spark 1+' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'giavatar', 'Avatar' , '', d)}\
+${@base_contains('MACHINEBUILD', 'gis8120', 'S 8120' , '', d)}\
 "
 
 MACHINE_BRAND = "\
@@ -37,6 +38,7 @@ ${@base_contains('MACHINEBUILD', 'sabtriple', 'SAB' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sabsolo', 'SAB' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'fulanspark1', 'Fulan' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'giavatar', 'Galaxy Innovations' , '', d)}\
+${@base_contains('MACHINEBUILD', 'gis8120', 'Galaxy Innovations' , '', d)}\
 "
 
 IMAGEDIR ?= "\
@@ -55,6 +57,7 @@ ${@base_contains('MACHINEBUILD', 'sabtriple', 'enigma2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sabsolo', 'enigma2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'fulanspark1', 'enigma2' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'giavatar', 'enigma2' , '', d)}\
+${@base_contains('MACHINEBUILD', 'gis8120', 'enigma2' , '', d)}\
 "
 
 MTD_KERNEL = "\
@@ -73,6 +76,7 @@ ${@base_contains('MACHINEBUILD', 'sabtriple', 'mtd5' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sabsolo', 'mtd5' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'fulanspark1', 'mtd5' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'giavatar', 'mtd5' , '', d)}\
+${@base_contains('MACHINEBUILD', 'gis8120', 'mtd5' , '', d)}\
 "
 
 MTD_ROOTFS = "\
@@ -91,6 +95,7 @@ ${@base_contains('MACHINEBUILD', 'sabtriple', 'mtd6' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'sabsolo', 'mtd6' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'fulanspark1', 'mtd6' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'giavatar', 'mtd6' , '', d)}\
+${@base_contains('MACHINEBUILD', 'gis8120', 'mtd6' , '', d)}\
 "
 
 KERNEL_FILE = "uImage"

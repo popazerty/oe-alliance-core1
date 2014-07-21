@@ -11,3 +11,7 @@ if ! [ -e /dev/hdmi_cec ] ; then
         /bin/mknod /dev/hdmi_cec c 149 0
 fi
 
+# set booster start frequenz
+if [ "$(grep config.plugins.booster.startfrequenz= /etc/enigma2/settings | sed 's/config.plugins.booster.startfrequenz=//g')" != "" ]; then
+	echo  $(grep config.plugins.booster.startfrequenz= /etc/enigma2/settings | sed 's/config.plugins.booster.startfrequenz=//g') > /proc/cpu_frequ/pll0_ndiv_mdiv
+fi

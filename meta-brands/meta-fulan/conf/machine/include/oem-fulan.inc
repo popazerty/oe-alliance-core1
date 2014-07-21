@@ -148,6 +148,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
 
 MACHINE_EXTRA_RRECOMMENDS = " \
     fulan-gst-plugin-dvbmediasink \
+    enigma2-plugin-systemplugins-sh4boostercontrol \
     "
 
 OLDEST_KERNEL = "2.6.32"

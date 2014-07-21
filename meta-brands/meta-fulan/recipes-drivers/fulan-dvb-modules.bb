@@ -13,7 +13,7 @@ inherit module gitpkgv
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
-PR = "r9"
+PR = "r10"
 PV = "0.5+git${SRCPV}"
 PKGV = "0.5.+git${GITPKGV}"
 
@@ -22,6 +22,7 @@ PTI_NP_PATH ?= "/data/pti_np"
 SRC_URI = " \
     git://github.com/sklnet/DDT-driver.git;protocol=git \
     file://ddbootup \
+    file://sh4booster \
     file://modules_${MACHINE}.conf \
     file://modules_conf_${MACHINE}.conf \
     file://COPYING \
@@ -128,6 +129,8 @@ do_install() {
     install -d ${D}/${sysconfdir}/rcS.d
     install -m 0755 ${WORKDIR}/ddbootup ${D}${sysconfdir}/init.d
     ln -sf ../init.d/ddbootup ${D}${sysconfdir}/rcS.d/S04ddbootup
+	install -m 0755 ${WORKDIR}/sh4booster ${D}${sysconfdir}/init.d
+	ln -sf ../init.d/sh4booster ${D}${sysconfdir}/rcS.d/S05sh4booster
 
     # if no pti_np sources are available and a custom pti.ko is present, overwrite the tdt one
     if [ ! -e ${PTI_NP_PATH}/Makefile ]; then

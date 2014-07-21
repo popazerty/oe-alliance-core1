@@ -4,6 +4,7 @@
 if ! [ -e /dev/dbox/oled0 ] ; then
 	mkdir -p /dev/dbox
 	/bin/mknod /dev/dbox/oled0 c 147 0
+	ln -s /dev/dbox/oled0 /dev/vfd
 fi
 
 # Create hdmi cec device

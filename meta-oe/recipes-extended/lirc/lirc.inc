@@ -11,7 +11,7 @@ RDEPENDS_lirc-exec = "lirc"
 RRECOMMENDS_${PN} = "lirc-exec kernel-module-uinput"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-INCPR = "r9"
+INCPR = "r10"
 
 SRC_URI = "http://prdownloads.sourceforge.net/lirc/lirc-${PV}.tar.bz2"
 

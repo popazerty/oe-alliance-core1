@@ -6,14 +6,14 @@ SECTION = "kernel/modules"
 LICENSE = " GPLv2"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
-SRCDATE = "20140711"
+SRCDATE = "20140722"
 
 inherit module gitpkgv
 
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
-PR = "r11"
+PR = "r12"
 PV = "0.5+git${SRCPV}"
 PKGV = "0.5.+git${GITPKGV}"
 

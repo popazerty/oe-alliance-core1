@@ -30,7 +30,8 @@ DEPENDS = " \
     enigma2-plugin-settings-catseye.5e.1w \
     enigma2-plugin-settings-catseye.7w \
     enigma2-plugin-settings-catseye.28e \
-    enigma2-plugin-settings-catseye.75e.to.45w \
+    enigma2-plugin-settings-catseye.28e.23e.19e.16e.13e.bb \
+    enigma2-plugin-settings-catseye.75e.to.60w \
     enigma2-plugin-settings-cst.dual1.db \
     enigma2-plugin-settings-cst.dual2.db \
     enigma2-plugin-settings-cst.four3.db \
@@ -38,10 +39,15 @@ DEPENDS = " \
     enigma2-plugin-settings-cst.motor.db \
     enigma2-plugin-settings-cst.trial3.db \
     enigma2-plugin-settings-cst.trial5.db \
+    enigma2-plugin-settings-malimali.3e.7e.9e.13e.16e.19e \
     enigma2-plugin-settings-malimali.9e.13e.19e \
     enigma2-plugin-settings-malimali.13e \
     enigma2-plugin-settings-malimali.13e.19e \
+    enigma2-plugin-settings-malimali.13e.16e.19e \
     enigma2-plugin-settings-malimali.19e \
+    enigma2-plugin-settings-malimali.39e.28e.23e.19e.16e.13e.0.8w \
+    enigma2-plugin-settings-malimali.39e.28e.26e.23e.19e.16e.13e.7e.0.8w \
+    enigma2-plugin-settings-malimali.39e.28e.26e.23e.19e.16e.13e.0.8w \
     enigma2-plugin-settings-malimali.motor.42e.to.30w \
     enigma2-plugin-settings-matze-19e-13e \
     enigma2-plugin-settings-matze-19e \
@@ -49,7 +55,7 @@ DEPENDS = " \
     enigma2-plugin-settings-predrag.19e \
     enigma2-plugin-settings-predrag.19e.13e \
     enigma2-plugin-settings-predrag.19e.16e.13e.08w \
-    enigma2-plugin-settings-predrag.28e.19e.13e.0.8w \
+    enigma2-plugin-settings-predrag.28e.19e.16e.13e.0.8w \
     enigma2-plugin-settings-predrag.28e.23e.19e.16e.13e.7e.4.8e.0.8w.4.0w \
     enigma2-plugin-settings-predrag.28e.26e.23e.19e.16e.13e.7.0e.0.8w.4.0w \
     enigma2-plugin-settings-predrag.28e.30w \

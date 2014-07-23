@@ -111,6 +111,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-fulan"
 PREFERRED_VERSION_linux-libc-headers = "2.6.32"
 PREFERRED_PROVIDER_directfb = "stm-directfb"
 SERIAL_CONSOLE = "115200 ttyAS0"
+PREFERRED_VERSION_lirc ?= "0.9.0"
 
 DVBPROVIDER = "kernel"
 

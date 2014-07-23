@@ -115,7 +115,7 @@ SERIAL_CONSOLE = "115200 ttyAS0"
 DVBPROVIDER = "kernel"
 
 USE_VT = "0"
-MACHINE_FEATURES = "3dtv alsa hdmicec switchoff wifi kernel26 ext2 usbhost serial dvb-c singlecore textlcd sh4booster"
+MACHINE_FEATURES = "3dtv alsa hdmicec switchoff wifi kernel26 ext2 usbhost serial dvb-c singlecore textlcd sh4booster no-nmap"
 
 KERNEL_IMAGETYPE = "uImage"
 #KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"

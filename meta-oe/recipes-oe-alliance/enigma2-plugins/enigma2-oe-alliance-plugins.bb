@@ -115,7 +115,7 @@ inherit autotools-brokensep gitpkgv pythonnative
 SRCREV = "${AUTOREV}"
 PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
-PR = "r12"
+PR = "r14"
 
 SRC_URI="git://github.com/sklnet/oe-alliance-plugins.git;protocol=git"
 
@@ -125,6 +125,7 @@ EXTRA_OECONF = " \
     STAGING_INCDIR=${STAGING_INCDIR} \
     STAGING_LIBDIR=${STAGING_LIBDIR} \
     --with-boxtype=${MACHINE} \
+    --with-arch=${MACHINE_ARCH} \
     "
 
 ALLOW_EMPTY_${PN} = "1"

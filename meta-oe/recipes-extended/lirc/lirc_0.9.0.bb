@@ -15,21 +15,15 @@ SRC_URI_append = " \
     file://lircd.init \
     file://lircmd.init \
     file://lircexec.init \
-"
-
-SRC_URI_append_spark = " \
+    file://lircd_amiko8900.conf \
+    file://lircd_amikoalien.conf \
     file://lircd_spark.conf \
 "
 
-SRC_URI_append_spark7162 = " \
-    file://lircd_spark.conf \
-"
-
-do_install_append_spark() {
-        install -m 0644 ${WORKDIR}/lircd_spark.conf ${D}${sysconfdir}/lircd.conf
+do_install_append() {
+        if [ -e ${WORKDIR}/lircd_${MACHNEBUILD}.conf ]; then
+           install -m 0644 ${WORKDIR}/lircd_${MACHNEBUILD}.conf ${D}${sysconfdir}/lircd.conf
+        elif [ "${BRAND_OEM}" = "fulan" ]; then
+           install -m 0644 ${WORKDIR}/lircd_spark.conf ${D}${sysconfdir}/lircd.conf
+        fi
 }
-
-do_install_append_spark7162() {
-        install -m 0644 ${WORKDIR}/lircd_spark.conf ${D}${sysconfdir}/lircd.conf
-}
-

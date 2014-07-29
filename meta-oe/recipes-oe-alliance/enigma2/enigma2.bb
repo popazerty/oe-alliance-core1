@@ -157,7 +157,7 @@ inherit autotools-brokensep gitpkgv pkgconfig pythonnative
 
 PV = "3.0+git${SRCPV}"
 PKGV = "3.0+git${GITPKGV}"
-PR = "r11"
+PR = "r12"
 
 SRC_URI = "${ENIGMA2_URI}"
 
@@ -225,6 +225,7 @@ EXTRA_OECONF = " \
     --with-po --with-libsdl=no \
     --enable-dependency-tracking \
     ${@base_contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
+    ${@base_contains("MACHINE_FEATURES", "dualtextlcd", "--with-dualtextlcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd", "--with-colorlcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd128", "--with-colorlcd128" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd220", "--with-colorlcd220" , "", d)} \

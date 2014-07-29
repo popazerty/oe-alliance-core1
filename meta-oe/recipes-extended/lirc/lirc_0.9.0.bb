@@ -21,8 +21,8 @@ SRC_URI_append = " \
 "
 
 do_install_append() {
-        if [ -e ${WORKDIR}/lircd_${MACHNEBUILD}.conf ]; then
-           install -m 0644 ${WORKDIR}/lircd_${MACHNEBUILD}.conf ${D}${sysconfdir}/lircd.conf
+        if [ -e ${WORKDIR}/lircd_${MACHINEBUILD}.conf ]; then
+           install -m 0644 ${WORKDIR}/lircd_${MACHINEBUILD}.conf ${D}${sysconfdir}/lircd.conf
         elif [ "${BRAND_OEM}" = "fulan" ]; then
            install -m 0644 ${WORKDIR}/lircd_spark.conf ${D}${sysconfdir}/lircd.conf
         fi

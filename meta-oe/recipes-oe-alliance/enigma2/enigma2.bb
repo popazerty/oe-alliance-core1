@@ -225,7 +225,6 @@ EXTRA_OECONF = " \
     --with-po --with-libsdl=no \
     --enable-dependency-tracking \
     ${@base_contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
-    ${@base_contains("MACHINE_FEATURES", "dualtextlcd", "--with-dualtextlcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd", "--with-colorlcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd128", "--with-colorlcd128" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd220", "--with-colorlcd220" , "", d)} \

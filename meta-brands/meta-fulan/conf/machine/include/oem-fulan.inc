@@ -116,7 +116,7 @@ PREFERRED_VERSION_lirc ?= "0.9.0"
 DVBPROVIDER = "kernel"
 
 USE_VT = "0"
-MACHINE_FEATURES = "3dtv alsa hdmicec switchoff wifi kernel26 ext2 usbhost serial dvb-c singlecore dualtextlcd sh4booster no-nmap"
+MACHINE_FEATURES = "3dtv alsa hdmicec switchoff wifi kernel26 ext2 usbhost serial dvb-c singlecore textlcd sh4booster no-nmap"
 
 KERNEL_IMAGETYPE = "uImage"
 #KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"

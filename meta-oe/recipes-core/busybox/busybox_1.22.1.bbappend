@@ -65,3 +65,4 @@ do_install_append() {
 }
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${P}:"
+

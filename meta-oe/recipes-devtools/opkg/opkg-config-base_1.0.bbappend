@@ -19,3 +19,8 @@ do_compile_append_cube() {
 do_compile_append_dm800() {
 	echo "arch mips32el $priority" >> $archconf
 }
+
+do_compile_append_sh4() {
+	echo "arch mips32el $priority" >> $archconf
+	echo "arch mipsel $priority" >> $archconf
+}

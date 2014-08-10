@@ -62,7 +62,7 @@ DEPENDS = "enigma2 \
     python-daap \
     dvdbackup \
     libcddb \
-    nmap \
+    ${@base_contains("TARGET_ARCH", "sh4", "" , "nmap", d)} \
     libshowiframe \
     libav \
     "

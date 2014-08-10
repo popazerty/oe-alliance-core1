@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Create display device if not present
+if ! [ -e /dev/dbox/oled0 ] ; then
+	mkdir -p /dev/dbox
+	/bin/mknod /dev/dbox/oled0 c 147 0
+	ln -s /dev/dbox/oled0 /dev/vfd
+fi
+
+# Create hdmi cec device
+if ! [ -e /dev/hdmi_cec ] ; then
+        /bin/mknod /dev/hdmi_cec c 149 0
+fi

@@ -38,6 +38,8 @@ PROVIDES += " \
     enigma2-plugin-extensions-lcd4linux \
     enigma2-plugin-extensions-remotechannelstreamconverter \
     ${@base_contains("MACHINE_FEATURES", "legacykernel", "" , "enigma2-plugin-systemplugins-wirelessaccesspoint", d)} \
+    ${@base_contains('MACHINE', 'spark7162', 'enigma2-plugin-systemplugins-uniontunertype ' , ' ', d)} \
+    ${@base_contains('MACHINE_FEATURES', 'sh4booster', 'enigma2-plugin-systemplugins-sh4boostercontrol' , ' ', d)} \
      "
 
 DEPENDS = "\
@@ -114,7 +116,7 @@ inherit autotools-brokensep gitpkgv pythonnative
 SRCREV = "${AUTOREV}"
 PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
-PR = "r11"
+PR = "r15"
 
 SRC_URI="git://github.com/sklnet/oe-alliance-plugins.git;protocol=git"
 
@@ -124,6 +126,7 @@ EXTRA_OECONF = " \
     STAGING_INCDIR=${STAGING_INCDIR} \
     STAGING_LIBDIR=${STAGING_LIBDIR} \
     --with-boxtype=${MACHINE} \
+    --with-arch=${TARGET_ARCH} \
     "
 
 ALLOW_EMPTY_${PN} = "1"

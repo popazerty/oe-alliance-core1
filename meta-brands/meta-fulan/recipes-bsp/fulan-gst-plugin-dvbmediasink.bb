@@ -15,9 +15,13 @@ S = "${WORKDIR}/git/libs/gst-plugins-dvbmediasink"
 
 PV = "0.10.0"
 PKGV = "0.10.0"
-PR = "r1"
+PR = "r2"
 
 inherit autotools pkgconfig
+
+do_configure_prepend() {
+    touch ${S}/NEWS
+}
 
 FILES_${PN} = "${libdir}/gstreamer-0.10/*.so*"
 FILES_${PN}-dev += "${libdir}/gstreamer-0.10/*.la"

@@ -1,5 +1,6 @@
 inherit src_rpm
 
+STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
 STLINUX_STSLAVE = "stlinux24-target-stslave-${PV}-24.src.rpm"
 
 SRC_URI[md5sum] = "6a4d3fa8f1b88715a3494ac1afe20ee5"

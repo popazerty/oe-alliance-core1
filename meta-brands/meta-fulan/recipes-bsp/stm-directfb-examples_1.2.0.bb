@@ -10,6 +10,8 @@ PR = "r0"
 
 RPROVIDES_${PN} = "directfb-examples"
 
+STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
+
 SRC_URI = "${STLINUX_SH_UPD_SRPMS}/stlinux24-target-directfb-examples-1.2.0+git1.76b8894-5.src.rpm"
 LOCAL_SRC = "\
             file://${WORKDIR}/DirectFB-examples-1.2.0-0001-df_bltload-support-stmfb-s-API-for-retrieving-blitte.patch;patch=1;pnum=1 \

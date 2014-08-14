@@ -13,6 +13,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=dcf3c825659e82539645da41a7908589"
 HOMEPAGE = "http://directfb.org"
 DEPENDS = "jpeg libpng freetype zlib tslib"
 
+STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
 STM_VERSION = "STM2011.09.27"
 
 SRC_URI = "${STLINUX_SH_UPD_SRPMS}/stlinux24-target-directfb-${PV}+${STM_VERSION}-3.src.rpm  \

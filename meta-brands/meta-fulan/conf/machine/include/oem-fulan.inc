@@ -102,8 +102,6 @@ KERNEL_FILE = "uImage"
 ROOTFS_FILE = "e2jffs2.img"
 
 TARGET_ARCH = "sh4"
-STLINUX_SH_UPD_SRPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS"
-STLINUX_SH_UPD_RPMS = "http://ftp.stlinux.com/pub/stlinux/2.4/updates/RPMS/sh4/"
 
 GCCVERSION = "4.8%"
 

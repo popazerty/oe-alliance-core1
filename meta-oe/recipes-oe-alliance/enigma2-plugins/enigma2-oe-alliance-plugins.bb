@@ -74,7 +74,6 @@ DESCRIPTION_enigma2-plugin-systemplugins-firmwareupgrade = "Upgrade your system 
 RDEPENDS_enigma2-plugin-systemplugins-firmwareupgrade_vuduo2 = "vuplus-checkvfd"
 DESCRIPTION_enigma2-plugin-systemplugins-fpgaupgrade = "Upgrade your system FPGA"
 DESCRIPTION_enigma2-plugin-systemplugins-vfdcontrol = "vfd controller"
-RDEPENDS_enigma2-plugin-systemplugins-vfdcontrol = "gigablue-vfdctl"
 DESCRIPTION_enigma2-plugin-extensions-streamtv = "iptv player"
 RDEPENDS_enigma2-plugin-extensions-streamtv = "librtmp1"
 DESCRIPTION_enigma2-plugin-systemplugins-tempfancontrol = "Control your internal system fan."
@@ -116,9 +115,9 @@ inherit autotools-brokensep gitpkgv pythonnative
 SRCREV = "${AUTOREV}"
 PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
-PR = "r15"
+PR = "r13"
 
-SRC_URI="git://github.com/sklnet/oe-alliance-plugins.git;protocol=git"
+SRC_URI="git://github.com/sklnet/oe-alliance-plugins.git;protocol=git;branch=2.3"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \

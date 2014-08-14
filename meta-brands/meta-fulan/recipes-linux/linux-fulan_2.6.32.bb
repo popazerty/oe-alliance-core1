@@ -48,7 +48,7 @@ SRC_URI = "git://git.stlinux.com/stm/linux-sh4-2.6.32.y.git;protocol=git;branch=
     file://kbuild-generate-mudules-builtin.patch;patch=1 \
     file://linux-sh4-cpuinfo.patch;patch=1 \
     file://linux-sh4-add_missing_eid.patch;patch=1 \
-    file://linux-sh4-${LINUX_VERSION}-${STM_PATCH_STR}_${MACHINE}.config \
+    file://defconfig \
     file://st-coprocessor.h \
 "
 
@@ -81,7 +81,7 @@ KEEPUIMAGE = "true"
 
 do_configure () {
     rm -f ${S}/.config || true
-    cp ${WORKDIR}/linux-sh4-${LINUX_VERSION}-${STM_PATCH_STR}_${MACHINE}.config ${S}/.config
+    cp ${WORKDIR}/defconfig ${S}/.config
     sed -i "s#^\(CONFIG_EXTRA_FIRMWARE_DIR=\).*#\1\"${STAGING_DIR_HOST}/lib/firmware\"#" .config;
         yes '' | oe_runmake oldconfig
     if test -e scripts/Makefile.fwinst ; then

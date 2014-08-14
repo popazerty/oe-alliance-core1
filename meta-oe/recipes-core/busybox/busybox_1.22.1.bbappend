@@ -19,14 +19,7 @@ SRC_URI += " \
             file://mdev-mount.sh \
             file://inetd \
             file://inetd.conf \
-            "
-
-SRC_URI_append_spark7162 = " \
-            file://defconfig_hwclock \
-            "
-
-SRC_URI_append_spark = " \
-            file://defconfig_hwclock \
+            ${@base_contains("BRAND_OEM", "fulan", "file://defconfig_hwclock" , "", d)} \
             "
 
 # we do not really depend on mtd-utils, but as mtd-utils replaces 
@@ -48,15 +41,8 @@ INITSCRIPT_NAME_${PN}-cron = "${BPN}-cron"
 FILES_${PN}-cron = "${sysconfdir}/cron ${sysconfdir}/init.d/${BPN}-cron"
 RDEPENDS_${PN}-cron += "${PN}"
 
-do_configure_prepend_spark7162() {
-    cp ${WORKDIR}/defconfig_hwclock ${WORKDIR}/defconfig
-}
-
-do_configure_prepend_spark() {
-    cp ${WORKDIR}/defconfig_hwclock ${WORKDIR}/defconfig
-}
-
 do_install_append() {
+    ${@base_contains("BRAND_OEM", "fulan", "cp ${WORKDIR}/defconfig_hwclock ${WORKDIR}/defconfig" , "", d)}
     if grep -q "CONFIG_CRONTAB=y" ${WORKDIR}/defconfig; then
         install -d ${D}${sysconfdir}/cron/crontabs
     fi

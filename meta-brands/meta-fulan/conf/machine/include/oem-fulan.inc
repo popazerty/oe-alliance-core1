@@ -173,12 +173,10 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 
 EXTRA_IMAGEDEPENDS += "\
     enigma2-plugin-systemplugins-vfdcontrol \
-    gigablue-vfdctl \
     "
 
 MACHINE_EXTRA_RDEPENDS = "\
     enigma2-plugin-systemplugins-vfdcontrol \
-    gigablue-vfdctl \
     "
 
 OLDEST_KERNEL = "2.6.32"

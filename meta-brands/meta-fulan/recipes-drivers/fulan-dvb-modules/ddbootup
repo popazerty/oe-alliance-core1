@@ -15,3 +15,5 @@ fi
 # Flush eth0 device which is set by kernel cmdline
 ip addr flush dev eth0
 
+rm -f /dev/dvb/adapter0/ca1
+ln -s /dev/dvb/adapter0/ca0 /dev/dvb/adapter0/ca1

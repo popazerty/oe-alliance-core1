@@ -16,12 +16,12 @@ DEPENDS_spark += " \
 
 inherit kernel machine_kernel_pr
 
-SRCDATE = "20140603"
+SRCDATE = "20140717"
 MACHINE_KERNEL_PR_append = ".25"
 
-STM_PATCH_STR = "0215"
+STM_PATCH_STR = "0216"
 LINUX_VERSION = "2.6.32.61"
-SRCREV = "5384bd391266210e72b2ca34590bd9f543cdb5a3"
+SRCREV = "cfb940db2f158eda3fba47d0e001612d13c10b40"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned

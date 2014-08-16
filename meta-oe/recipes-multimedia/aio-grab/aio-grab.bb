@@ -3,9 +3,7 @@ MAINTAINER = "PLi team"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=751419260aa954499f7abaabaa882bbe"
 
-DEPENDS = "jpeg libpng zlib"
-DEPENDS_spark += " fulan-dvb-modules"
-DEPENDS_spark7162 += " fulan-dvb-modules"
+DEPENDS = "jpeg libpng zlib ${@base_contains("BRAND_OEM", "fulan", "fulan-dvb-modules" , "", d)}"
 
 inherit gitpkgv
 

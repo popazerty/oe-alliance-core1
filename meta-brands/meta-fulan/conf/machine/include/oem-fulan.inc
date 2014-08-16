@@ -152,8 +152,6 @@ IMAGE_CMD_jffs2_append = " ; \
     rm -rf ${IMAGEDIR}; \
     "
 	
-MACHINE_EXTRA_RRECOMMENDS = "kernel-modules"
-
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     stlinux24-sh4-stx7111-fdma-firmware \
     stlinux24-sh4-stmfb-firmware-stx7111 \
@@ -166,6 +164,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     "
 
 MACHINE_EXTRA_RRECOMMENDS = " \
+    kernel-modules \
     fulan-gst-plugin-dvbmediasink \
     enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \

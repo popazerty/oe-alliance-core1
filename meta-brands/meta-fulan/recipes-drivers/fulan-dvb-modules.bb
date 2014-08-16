@@ -6,7 +6,7 @@ SECTION = "kernel/modules"
 LICENSE = " GPLv2"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
-SRCDATE = "20140809"
+SRCDATE = "20140815"
 
 inherit module gitpkgv
 
@@ -14,8 +14,8 @@ PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
 PR = "r14"
-PV = "0.6+git${SRCPV}"
-PKGV = "0.6.+git${GITPKGV}"
+PV = "0.7+git${SRCPV}"
+PKGV = "0.7.+git${GITPKGV}"
 
 PTI_NP_PATH ?= "/data/pti_np"
 

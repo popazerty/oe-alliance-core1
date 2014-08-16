@@ -17,7 +17,7 @@ DEPENDS_spark += " \
 inherit kernel machine_kernel_pr
 
 SRCDATE = "20140603"
-MACHINE_KERNEL_PR_append = ".23"
+MACHINE_KERNEL_PR_append = ".25"
 
 STM_PATCH_STR = "0215"
 LINUX_VERSION = "2.6.32.61"

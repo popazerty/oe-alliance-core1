@@ -5,12 +5,13 @@ SECTION = "console/utils"
 LICENSE = "GPLv2+"
 require conf/license/license-gplv2.inc
 RDEPENDS_${PN} = "alsa-utils-amixer"
-PR = "r1"
+PR = "r2"
 
 SRC_URI = " file://alsa-mixer-conf"
 
 do_install() {
     install -d ${D}/${sysconfdir}/init.d
+    install -d ${D}/${sysconfdir}/rcS.d
     install -m 0755 ${WORKDIR}/alsa-mixer-conf ${D}${sysconfdir}/init.d
     ln -sf ../init.d/alsa-mixer-conf ${D}${sysconfdir}/rcS.d/S40alsa-mixer-conf
 }

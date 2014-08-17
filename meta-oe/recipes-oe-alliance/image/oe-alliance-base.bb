@@ -9,7 +9,7 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGES = "${PN}"
 
 PV = "1.0"
-PR = "r25"
+PR = "r26"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 RDEPENDS_${PN} = "\
@@ -20,6 +20,7 @@ RDEPENDS_${PN} = "\
     ${@base_contains("MACHINE_FEATURES", "gbwol", "gigablue-ethwol", "", d)} \
     ${@base_contains("MACHINE_FEATURES", "gbsoftwol", "gigablue-ethsoftwol", "", d)} \
     ${@base_contains("MACHINE_FEATURES", "no-nmap", "" , "nmap", d)} \
+    ${@base_contains("TARGET_ARCH", "sh4", "alsa-utils-amixer-conf" , "", d)} \
     avahi-daemon \
     dropbear \
     early-configure \
@@ -42,4 +43,3 @@ RDEPENDS_${PN} = "\
     vsftpd \
     python-twisted-protocols python-numbers \
     "
-

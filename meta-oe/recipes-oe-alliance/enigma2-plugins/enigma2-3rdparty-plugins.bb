@@ -9,7 +9,7 @@ inherit gitpkgv deploy
 SRCREV = "${AUTOREV}"
 PV = "2.1+gitr${SRCPV}"
 PKGV = "2.1+gitr${GITPKGV}"
-PR = "r72"
+PR = "r74"
 
 SRC_URI="git://github.com/oe-alliance/3rdparty-plugins.git;protocol=git"
 
@@ -28,7 +28,7 @@ S = "${WORKDIR}/git"
 THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-sundtekcontrolcenter_current_all.ipk \
     enigma2-plugin-extensions-atmolightd_0.7-pre22_all.ipk \
-    enigma2-plugin-extensions-autobouquets-e2_20140708_mips32el.ipk \
+    enigma2-plugin-extensions-autobouquets-e2_20140821_mips32el.ipk \
     enigma2-plugin-extensions-bildonline_3.1rc1_mips32el.ipk \
     enigma2-plugin-extensions-bluray_1.5c1_mips32el.ipk \
     enigma2-plugin-extensions-boblight-enigma2_0.8r6_mips32el.ipk \
@@ -61,7 +61,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-oscamstatusview_0.5_mips32el.ipk \
     enigma2-plugin-extensions-planerfs_6.44_all.ipk \
     enigma2-plugin-extensions-pluginspanel_1.0_r01_all.ipk \
-	enigma2-plugin-extensions-piconmanager_0.1-20140817-r0_all.ipk \
+	enigma2-plugin-extensions-piconmanager_0.1-20140820-r0_all.ipk \
     enigma2-plugin-extensions-picturecenterfs_5.17_all.ipk \
     enigma2-plugin-extensions-radiode_0.1_mips32el.ipk \
     enigma2-plugin-extensions-radioonline-oe2.0_1.0_all.ipk \

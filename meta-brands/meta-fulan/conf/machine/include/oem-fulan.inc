@@ -168,7 +168,6 @@ MACHINE_EXTRA_RRECOMMENDS = " \
     fulan-gst-plugin-dvbmediasink \
     enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \
-    enigma2-plugin-systemplugins-sh4cecontrol \
     "
 
 EXTRA_IMAGEDEPENDS += "\

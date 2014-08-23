@@ -13,7 +13,7 @@ inherit module gitpkgv
 PACKAGES = "${PN} ${PN}-dev"
 
 SRCREV = "${AUTOREV}"
-PR = "r15"
+PR = "r16"
 PV = "0.7+git${SRCPV}"
 PKGV = "0.7.+git${GITPKGV}"
 

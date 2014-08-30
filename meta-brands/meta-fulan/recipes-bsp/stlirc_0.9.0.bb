@@ -11,10 +11,14 @@ RDEPENDS_lirc-exec = "stlirc"
 RRECOMMENDS_${PN} = "stlirc-exec kernel-module-uinput"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-RCONFLICTS = "lirc"
-RREPLACES = "lirc"
+RCONFLICTS_${PN} = "lirc"
+RCONFLICTS_stlirc-exec = "lirc-exec"
+RCONFLICTS_stlirc-remotes = "lirc-remotes"
+RREPLACES_${PN} = "lirc"
+RREPLACES_stlirc-exec = "lirc-exec"
+RREPLACES_stlirc-remotes = "lirc-remotes"
 
-PR = "r1"
+PR = "r2"
 
 SRC_URI = "http://prdownloads.sourceforge.net/lirc/lirc-${PV}.tar.bz2 \
     file://lirc-0.9.0-neutrino-uinput-hack.diff;patch=1 \
@@ -66,12 +70,12 @@ do_install_append() {
     fi
 }
 
-PACKAGES =+ "lirc-exec lirc-remotes"
+PACKAGES =+ "stlirc-exec stlirc-remotes"
 
 FILES_${PN}-dbg += "${bindir}/.debug ${sbindir}/.debug"
 FILES_${PN}-dev += "${libdir}/liblirc_client.so"
 FILES_${PN} = "${bindir} ${sbindir} ${libdir}/lib*.so.* ${sysconfdir} ${exec_prefix}/var"
-FILES_lirc-exec = "${bindir}/irexec ${sysconfdir}/init.d/lircexec"
-FILES_lirc-remotes = "${datadir}/lirc/remotes"
+FILES_stlirc-exec = "${bindir}/irexec ${sysconfdir}/init.d/lircexec"
+FILES_stlirc-remotes = "${datadir}/lirc/remotes"
 
 

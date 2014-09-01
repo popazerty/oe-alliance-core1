@@ -34,4 +34,3 @@ aUTC=no
 FILES_${PN}_append_sh4 = " \
     /bin \
 "
-

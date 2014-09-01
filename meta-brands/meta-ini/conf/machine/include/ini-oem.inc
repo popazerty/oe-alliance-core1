@@ -85,7 +85,7 @@ ${@base_contains('MACHINEBUILD', 'atemio5x00', 'mtd0' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'atemio6x00', 'mtd0' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'atemionemesis', 'mtd0' , '', d)}\
 ${@base_contains('MACHINEBUILD', 'beyonwizt3', 'mtd2' , '', d)}\
-${@base_contains('MACHINEBUILD', 'beyonwizt4', 'mtd2' , '', d)}\
+${@base_contains('MACHINEBUILD', 'beyonwizt4', 'mtd0' , '', d)}\
 "
 
 KERNEL_FILE = "kernel.bin"
@@ -117,7 +117,6 @@ PREFERRED_VERSION_nfs-utils ?= "1.2.8"
 
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "ini-blindscan-utils"
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "ini-blindscan-utils"
-PREFERRED_PROVIDER_virtual/transtreamproxy = "ini-transtreamproxy"
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"

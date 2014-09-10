@@ -18,4 +18,9 @@ DEPENDS = "\
     openvixhd-softcams-scam \
     "
 
+DEPENDS_sh4 = "\
+    openvixhd-softcams-oscam \
+    openvixhd-softcams-oscam-pcscd \
+    "
+
 PR = "r1"

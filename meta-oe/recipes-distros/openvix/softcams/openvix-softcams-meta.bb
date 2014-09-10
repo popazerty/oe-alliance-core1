@@ -24,10 +24,4 @@ DEPENDS_sh4 = "\
     openvix-softcams-oscam-pcscd \
     "
 
-# Remove unavailable sh4 softcams
-DEPENDS_sh4 = "\
-    openvix-softcams-oscam \
-    openvix-softcams-oscam-pcscd \
-    "
-
 PR = "r4"

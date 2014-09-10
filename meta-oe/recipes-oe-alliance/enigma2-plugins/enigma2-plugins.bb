@@ -63,6 +63,7 @@ DEPENDS = "enigma2 \
     python-daap \
     dvdbackup \
     libcddb \
+    nmap \
     libshowiframe \
     libav \
     "

@@ -122,7 +122,7 @@ PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
 PR = "r15"
 
-SRC_URI="git://github.com/sklnet/oe-alliance-plugins.git;protocol=git;branch=2.3"
+SRC_URI="git://github.com/oe-alliance/oe-alliance-plugins.git;protocol=git;branch=2.3"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \

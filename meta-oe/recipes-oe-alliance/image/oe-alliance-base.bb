@@ -9,7 +9,7 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGES = "${PN}"
 
 PV = "1.0"
-PR = "r26"
+PR = "r25"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 RDEPENDS_${PN} = "\
@@ -43,3 +43,4 @@ RDEPENDS_${PN} = "\
     vsftpd \
     python-twisted-protocols python-numbers \
     "
+

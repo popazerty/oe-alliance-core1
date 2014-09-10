@@ -22,7 +22,6 @@ SRC_URI += " \
             file://inetd \
             file://inetd.conf \
             file://0008-make_unicode_printable.patch \
-            ${@base_contains("BRAND_OEM", "fulan", "file://defconfig_hwclock" , "", d)} \
             "
 
 # we do not really depend on mtd-utils, but as mtd-utils replaces 
@@ -45,7 +44,6 @@ FILES_${PN}-cron = "${sysconfdir}/cron ${sysconfdir}/init.d/${BPN}-cron"
 RDEPENDS_${PN}-cron += "${PN}"
 
 do_install_append() {
-    ${@base_contains("BRAND_OEM", "fulan", "cp ${WORKDIR}/defconfig_hwclock ${WORKDIR}/defconfig" , "", d)}
     if grep -q "CONFIG_CRONTAB=y" ${WORKDIR}/defconfig; then
         install -d ${D}${sysconfdir}/cron/crontabs
     fi
@@ -54,4 +52,3 @@ do_install_append() {
 }
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${P}:"
-
